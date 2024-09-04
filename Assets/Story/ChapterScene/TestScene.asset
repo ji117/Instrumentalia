@@ -17,5 +17,8 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
   - text: Hello World too!
     speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+  choices:
+  - choiceSentences: []
+    sentenceNumber: -1
   background: {fileID: 0}
   nextScene: {fileID: 11400000, guid: 2e9b39d0472e0f746b90a8cbba7dfa9c, type: 2}

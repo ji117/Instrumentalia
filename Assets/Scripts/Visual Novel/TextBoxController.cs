@@ -8,10 +8,12 @@ public class TextBoxController : MonoBehaviour
 {
     public TextMeshProUGUI dialogue;
     public TextMeshProUGUI speakerName;
+    public Image speakerPotrait;
     public Image background; 
     public ChapterScene currentScene;
 
-    private int sentenceIndex = -1;
+   [SerializeField] private int sentenceIndex = -1;
+    private int choiceNumber = 0;
     private State state = State.COMPLETED;
 
     private enum State
@@ -19,19 +21,51 @@ public class TextBoxController : MonoBehaviour
         PLAYING, COMPLETED
     }
 
-   public void PlayScene(ChapterScene scene)
+    private void Start()
+    {
+        PlayNextSentence();
+    }
+    public void PlayScene(ChapterScene scene)
     {
         currentScene = scene;
         background.sprite = currentScene.background;
         sentenceIndex = -1;
-        PlayNextSentence();
     }
     public void PlayNextSentence()
     {
         StartCoroutine(TypeDialogue(currentScene.sentences[++sentenceIndex].text));
         speakerName.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
+        speakerPotrait.sprite = currentScene.sentences[sentenceIndex].speaker.speakerPotrait;
     }
 
+    public void PlayChoiceSentence(int playerChoice)
+    {
+        StartCoroutine(TypeDialogue(currentScene.choices[choiceNumber].choiceSentences[playerChoice].text));
+        speakerName.text = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerName;
+        speakerPotrait.sprite = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerPotrait;
+        choiceNumber++;
+    }
+
+    public void MakeChoice()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayChoiceSentence(0);
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            PlayChoiceSentence(1);
+            return;
+        }
+        MakeChoice(); 
+    }
+
+    public int GetSentenceIndex()
+    {
+        return sentenceIndex;
+    }
     public bool IsCompleted()
     {
         return state == State.COMPLETED;

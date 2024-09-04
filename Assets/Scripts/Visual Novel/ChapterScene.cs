@@ -6,7 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public class ChapterScene : ScriptableObject
 {
-    public List<Sentence> sentences; 
+    public List<Sentence> sentences;
+    public List<Choice> choices;
     public Sprite background;
     public ChapterScene nextScene;
 
@@ -15,6 +16,14 @@ public class ChapterScene : ScriptableObject
     {
         public string text;
         public Speaker speaker; 
+    }
+    [System.Serializable]
+    public struct Choice
+    {
+        public List<Sentence> choiceSentences;
+        public string reponse1;
+        public string reponse2;
+        public int sentenceNumber; 
     }
 
 }

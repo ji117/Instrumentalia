@@ -15,5 +15,18 @@ MonoBehaviour:
   sentences:
   - text: Hello
     speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: How are you?
+    speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+  - text: Test
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  choices:
+  - choiceSentences:
+    - text: That's great!
+      speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+    - text: That sucks!
+      speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+    reponse1: Good
+    reponse2: Bad
+    sentenceNumber: 1
   background: {fileID: 21300000, guid: ff7496a855891dd4cb4a3bf50ffa0223, type: 3}
   nextScene: {fileID: 0}

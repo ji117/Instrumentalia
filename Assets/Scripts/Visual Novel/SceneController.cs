@@ -7,6 +7,8 @@ public class SceneController : MonoBehaviour
 {
     public ChapterScene currentScene;
     public TextBoxController textbox;
+
+    private int choiceIndex = 0;
     void Start()
     {
         textbox.PlayScene(currentScene);
@@ -17,6 +19,15 @@ public class SceneController : MonoBehaviour
         {
             if (textbox.IsCompleted())
             {
+                if (choiceIndex < textbox.currentScene.choices.Count)
+                {
+                    if (textbox.currentScene.choices[choiceIndex].sentenceNumber == textbox.GetSentenceIndex())
+                    {
+                        textbox.MakeChoice();
+                        choiceIndex++;
+                        return;
+                    }
+                }
                 if (textbox.IsLastSentence())
                 {
                     currentScene = currentScene.nextScene;
