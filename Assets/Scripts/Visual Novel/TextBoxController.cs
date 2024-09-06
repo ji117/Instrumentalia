@@ -11,9 +11,14 @@ public class TextBoxController : MonoBehaviour
     public Image speakerPotrait;
     public Image background; 
     public ChapterScene currentScene;
+    public GameObject decisionButton1;
+    public GameObject decisionButton2;
 
-   [SerializeField] private int sentenceIndex = -1;
+    private int sentenceIndex = -1;
     private int choiceNumber = 0;
+    private bool decision1 = false;
+    private bool decision2 = false;
+    private bool choiceMade = false;
     private State state = State.COMPLETED;
 
     private enum State
@@ -46,20 +51,29 @@ public class TextBoxController : MonoBehaviour
         choiceNumber++;
     }
 
-    public void MakeChoice()
+    public bool MakeChoice()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (IsDecisionButton1Pressed())
         {
             PlayChoiceSentence(0);
-            return;
+            decision1 = false;
+            choiceMade = true;
+            return choiceMade;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (IsDecisionButton2Pressed())
         {
             PlayChoiceSentence(1);
-            return;
+            decision2 = false;
+            choiceMade = true;
+            return choiceMade;
         }
-        MakeChoice(); 
+        return choiceMade;
+    }
+
+    public void ChoiceMade()
+    {
+        choiceMade = false; 
     }
 
     public int GetSentenceIndex()
@@ -75,6 +89,27 @@ public class TextBoxController : MonoBehaviour
     {
         return sentenceIndex + 1 == currentScene.sentences.Count;
     }
+
+    private bool IsDecisionButton1Pressed()
+    {
+        return decision1;
+    }
+
+    private bool IsDecisionButton2Pressed()
+    {
+        return decision2;
+    }
+
+    public void DecisionButton1Pressed()
+    {
+        decision1 = true;
+    }
+
+    public void DecisionButton2Pressed()
+    {
+        decision2 = true; 
+    }
+
     private IEnumerator TypeDialogue(string text)
     {
         dialogue.text = "";

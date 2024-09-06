@@ -21,8 +21,8 @@ public class ChapterScene : ScriptableObject
     public struct Choice
     {
         public List<Sentence> choiceSentences;
-        public string reponse1;
-        public string reponse2;
+        public string response1;
+        public string response2;
         public int sentenceNumber; 
     }
 
