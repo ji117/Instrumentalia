@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     public ChapterScene currentScene;
     public TextBoxController textbox;
 
-    private int choiceIndex = 0;
+    
     private bool isChoice = false;
     
 
@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
         {
             if (textbox.MakeChoice())
             {
-                choiceIndex++;
+                textbox.IncrementChoiceIndex();
                 isChoice = false;
                 textbox.ChoiceMade();
                 textbox.decisionButton1.SetActive(false);
@@ -36,14 +36,14 @@ public class SceneController : MonoBehaviour
         {
             if (textbox.IsCompleted())
             {
-                if (choiceIndex < textbox.currentScene.choices.Count)
+                if (textbox.GetChoiceIndex() < textbox.currentScene.choices.Count)
                 {
-                    if (textbox.currentScene.choices[choiceIndex].sentenceNumber == textbox.GetSentenceIndex() && isChoice == false)
+                    if (textbox.currentScene.choices[textbox.GetChoiceIndex()].sentenceNumber == textbox.GetSentenceIndex() /*&& isChoice == false*/)
                     {
                         textbox.decisionButton1.SetActive(true);
                         textbox.decisionButton2.SetActive(true);
-                        textbox.decisionButton1.GetComponentInChildren<TextMeshProUGUI>().text = currentScene.choices[choiceIndex].response1;
-                        textbox.decisionButton2.GetComponentInChildren<TextMeshProUGUI>().text = currentScene.choices[choiceIndex].response2;
+                        textbox.decisionButton1.GetComponentInChildren<TextMeshProUGUI>().text = currentScene.choices[textbox.GetChoiceIndex()].response1;
+                        textbox.decisionButton2.GetComponentInChildren<TextMeshProUGUI>().text = currentScene.choices[textbox.GetChoiceIndex()].response2;
                         isChoice = true;
                         return;
                     }
@@ -51,6 +51,7 @@ public class SceneController : MonoBehaviour
                 if (textbox.IsLastSentence())
                 {
                     currentScene = currentScene.nextScene;
+                    textbox.ResetSentenceIndex();
                     textbox.PlayScene(currentScene); 
                 }
                 textbox.PlayNextSentence();

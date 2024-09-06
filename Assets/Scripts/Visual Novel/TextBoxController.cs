@@ -14,7 +14,7 @@ public class TextBoxController : MonoBehaviour
     public GameObject decisionButton1;
     public GameObject decisionButton2;
 
-    private int sentenceIndex = -1;
+    [SerializeField] private int sentenceIndex = -1;
     private int choiceNumber = 0;
     private bool decision1 = false;
     private bool decision2 = false;
@@ -34,7 +34,6 @@ public class TextBoxController : MonoBehaviour
     {
         currentScene = scene;
         background.sprite = currentScene.background;
-        sentenceIndex = -1;
     }
     public void PlayNextSentence()
     {
@@ -76,10 +75,26 @@ public class TextBoxController : MonoBehaviour
         choiceMade = false; 
     }
 
+    public int GetChoiceIndex()
+    {
+        return choiceNumber;
+    }
+
+    public void IncrementChoiceIndex()
+    {
+        choiceNumber++;
+    }
+
+    public void ResetSentenceIndex()
+    {
+        sentenceIndex = -1;
+    }
+
     public int GetSentenceIndex()
     {
         return sentenceIndex;
     }
+
     public bool IsCompleted()
     {
         return state == State.COMPLETED;
@@ -119,7 +134,7 @@ public class TextBoxController : MonoBehaviour
         while(state != State.COMPLETED)
         {
             dialogue.text += text[wordIndex];
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.02f);
             if(++wordIndex == text.Length)
             {
                 state = State.COMPLETED;
