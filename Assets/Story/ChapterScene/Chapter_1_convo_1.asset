@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e54c41945dfa54fabf02ae3769fa24, type: 3}
+  m_Name: Chapter_1_convo_1
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: What did I tell you? Not a bad place, right? Heart of all music talent
+      can usually be traced right back here dude.
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "It\u2019ll be a lot easier to hang out, now you\u2019re finally moved
+      in here, >PLAYER NAME< . Social media friends are hardly real friends. You
+      were becoming a stranger."
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Oh my God! The price of drinks\u2026 Not bad. Finally, a place we can
+      afford. Makes a difference than back home."
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "Ah, ah\u2026 THIS is home now dude! Hang on I\u2019ll be right back with
+      drinks, go get a table."
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "They do gigs here on the weekly. The guys on stage they hated this place
+      being pulled down last year. There was a crowdfund to pull in a load of students
+      and performers to rebuild it in their image\u2026"
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Now they\u2019re the owners. Cool, huh?"
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Nice\u2026 What do they play?"
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "They dabble. Depends what their performers come up with. It\u2019s like
+      those game jams I told you about, I do next to my game development major. The
+      theme is revealed on the night\u2026"
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: Volunteers from the crowd give it a go and they provide the backing. Of
+      course you get a full band that wants to come on too.
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "These guys don\u2019t pander. They just want people to have a good time.
+      Good times!"
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Actually, that sounds pretty sweet. But\u2026 how can they do that with
+      the same instruments?"
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "C\u2019mon >PLAYER NAME< you can put a twist on any song nowadays. You
+      can turn something rock into tropical, something classic into dubstep, acoustic
+      into club. Anything goes."
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Ha, haa\u2026 Indeed it does. So off you go! "
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: Huh?
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "You\u2019re up! I\u2019ve been telling them about you\u2026 And tonight\u2019s
+      the night. Your first night. Christen it! Off you go! They\u2019re waiting
+      for you! "
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "What? Oh c\u2019mon! You had a hand in this didn\u2019t you, Gina?"
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: ...
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Zack, I\u2019m a bass guitar player, they\u2019ve already got that going
+      on. I came here to maybe start a band up, not become a fifth wheel to one. "
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "No sweat dude, you\u2019re taking center stage as both. Ryan\u2019s literally
+      taking his bass guitar off for you. Just don\u2019t break it\u2026 Those things
+      cost a friggin\u2019 fortune!"
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "\u2026 I\u2019ll get you for this!"
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: Ha, haa! Just go! You can kill us both when you come back!
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Ha\u2026 Deal\u2026 Fine!"
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  choices:
+  - choiceSentences: []
+    response1: 
+    response2: 
+    sentenceNumber: -2
+  background: {fileID: 21300000, guid: ff7496a855891dd4cb4a3bf50ffa0223, type: 3}
+  nextScene: {fileID: 11400000, guid: d445013ede3da9a488995f9bd02f38eb, type: 2}

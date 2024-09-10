@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e54c41945dfa54fabf02ae3769fa24, type: 3}
+  m_Name: Chapter_1_convo_2
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: Hey there! >PLAYER NAME< Zack & Gina told me about you coming tonight!
+      Up for this?
+    speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
+  - text: "Ha\u2026 Guess so\u2026 Not much choice now\u2026 Hell, I\u2019ll give
+      it a go!"
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "That\u2019s the spirit we like at the Vault\u2026 Here\u2019s your weapon,
+      kid. One bass guitar. The guys have your back. May I make a suggestion? Start
+      with >SONG TITLE< . You\u2019ll have this crowd in the palm of your hand."
+    speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
+  - text: Yeah, I know it. Thanks for the tip.
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "Sure thing. If you plan on more gigs, just to let you know, other places
+      all have their own tastes so there\u2019s no one-size-fits-all solution as
+      far as songs go. You\u2019ll have to discover that for yourself."
+    speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
+  - text: Got it. Thanks again.
+    speaker: {fileID: 11400000, guid: 011053b6476c7cf4cbbb01b720019680, type: 2}
+  - text: "Well\u2026 Shall we?"
+    speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
+  choices:
+  - choiceSentences: []
+    response1: 
+    response2: 
+    sentenceNumber: -2
+  background: {fileID: 21300000, guid: ff7496a855891dd4cb4a3bf50ffa0223, type: 3}
+  nextScene: {fileID: 11400000, guid: b8d02b4b334d9d54b948c04fe1a9427d, type: 2}
