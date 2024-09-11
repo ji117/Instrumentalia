@@ -16,6 +16,8 @@ public class TextBoxController : MonoBehaviour
 
     [SerializeField] private int sentenceIndex = -1;
     private int choiceNumber = 0;
+    private float originalDialogueSpeed = 0.02f;
+    private float dialogueSpeed = 0.02f;
     private bool decision1 = false;
     private bool decision2 = false;
     private bool choiceMade = false;
@@ -125,6 +127,17 @@ public class TextBoxController : MonoBehaviour
         decision2 = true; 
     }
 
+    public void SetDialogueSpeed(float newDialogueSpeed)
+    {
+        dialogueSpeed = newDialogueSpeed;
+    }
+
+    public void ResetDialogueSpeed()
+    {
+        dialogueSpeed = originalDialogueSpeed;
+    }
+
+
     private IEnumerator TypeDialogue(string text)
     {
         dialogue.text = "";
@@ -134,7 +147,7 @@ public class TextBoxController : MonoBehaviour
         while(state != State.COMPLETED)
         {
             dialogue.text += text[wordIndex];
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(dialogueSpeed);
             if(++wordIndex == text.Length)
             {
                 state = State.COMPLETED;
