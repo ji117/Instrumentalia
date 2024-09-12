@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3eebb128-bc86-4a13-87f5-0a4ee19c1209}">
+		<property name="assetPath">
+			<value>OS_FS2_Cm7_Bubble_Synth_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.7140136054421768</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c92b08f6-d4ab-4abc-8c43-0ee1a82f0421}</destination>
+		</relationship>
+	</object>
+</objects>

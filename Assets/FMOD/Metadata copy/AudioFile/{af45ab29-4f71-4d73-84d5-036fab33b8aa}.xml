@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{af45ab29-4f71-4d73-84d5-036fab33b8aa}">
+		<property name="assetPath">
+			<value>OS_SFX_Phone_In.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.0599999999999996</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c92b08f6-d4ab-4abc-8c43-0ee1a82f0421}</destination>
+		</relationship>
+	</object>
+</objects>

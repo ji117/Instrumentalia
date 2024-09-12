@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d26e6df7-bf55-4514-b299-b913e16b9377}">
+		<property name="assetPath">
+			<value>Rhythm Game - Apartment Eclectic.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>97.344807256235825</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c92b08f6-d4ab-4abc-8c43-0ee1a82f0421}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{687a3a5a-169c-450f-b824-7861d8d9ac8c}">
+		<property name="assetPath">
+			<value>shs_oat_vocal_crowd_boo_one_shot_.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.3695238095238089</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c92b08f6-d4ab-4abc-8c43-0ee1a82f0421}</destination>
+		</relationship>
+	</object>
+</objects>
