@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Melodi
   m_EditorClassIdentifier: 
   speakerName: Melodi
-  speakerPotrait: {fileID: 21300000, guid: 49fb38740b422aa4ca7bb4a23b815c17, type: 3}
+  speakerPotrait: {fileID: 21300000, guid: 7db07e8e56c82a64fa6a0a883b5a8024, type: 3}

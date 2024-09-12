@@ -34,8 +34,13 @@ public class SceneController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
+            if (textbox.IsCompleted() == false)
+            {
+                textbox.SetDialogueSpeed(0.0f);
+            }
             if (textbox.IsCompleted())
             {
+                textbox.ResetDialogueSpeed();
                 if (textbox.GetChoiceIndex() < textbox.currentScene.choices.Count)
                 {
                     if (textbox.currentScene.choices[textbox.GetChoiceIndex()].sentenceNumber == textbox.GetSentenceIndex() /*&& isChoice == false*/)
