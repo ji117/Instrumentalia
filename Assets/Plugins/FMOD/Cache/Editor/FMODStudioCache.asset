@@ -1,5 +1,167 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7562644763596118835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MobilePhone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_MobilePhone
+  Guid:
+    Data1: 633006360
+    Data2: 1173931198
+    Data3: -885246277
+    Data4: 1284514784
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5714
+--- !u!114 &-6363625332015696414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instrumentalia_Song1
+  m_EditorClassIdentifier: 
+  Path: event:/Instrumentalia_Song1
+  Guid:
+    Data1: 906873252
+    Data2: 1158773381
+    Data3: -158380906
+    Data4: 70354918
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108000
+--- !u!114 &-4843671897254163437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_GameStartClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_GameStartClick
+  Guid:
+    Data1: -993464036
+    Data2: 1137928363
+    Data3: 649677989
+    Data4: -1797667018
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1093
+--- !u!114 &-1379449103151119910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instrumentalia_Song2
+  m_EditorClassIdentifier: 
+  Path: event:/Instrumentalia_Song2
+  Guid:
+    Data1: 1947862992
+    Data2: 1230616699
+    Data3: -1846951272
+    Data4: -853666235
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 140893
+--- !u!114 &-1249389626488210878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_CharacterCreation
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_CharacterCreation
+  Guid:
+    Data1: 270759797
+    Data2: 1252183425
+    Data3: -767025732
+    Data4: 1945712234
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &-1133722569478030985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Clapping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Clapping
+  Guid:
+    Data1: 1948225727
+    Data2: 1312397847
+    Data3: 1997316266
+    Data4: -651938601
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 159335
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +174,282 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 8030801626724831981}
+  - {fileID: 8740869263722337726}
+  EditorEvents:
+  - {fileID: 1952017329411999833}
+  - {fileID: 863237615608875942}
+  - {fileID: -7562644763596118835}
+  - {fileID: -4843671897254163437}
+  - {fileID: 8686115928075362838}
+  - {fileID: 5421157925935450847}
+  - {fileID: 4633934082737458561}
+  - {fileID: -1249389626488210878}
+  - {fileID: 6720386371014560430}
+  - {fileID: 3948384289158187113}
+  - {fileID: -6363625332015696414}
+  - {fileID: -1133722569478030985}
+  - {fileID: -1379449103151119910}
+  - {fileID: 6261583851708540297}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 8740869263722337726}
+  StringsBanks:
+  - {fileID: 8030801626724831981}
+  cacheTime: 638617051905705173
   cacheVersion: 131619
+--- !u!114 &863237615608875942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instrumentalia_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Instrumentalia_Menu
+  Guid:
+    Data1: 100600855
+    Data2: 1336851736
+    Data3: -660735348
+    Data4: -689222513
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 118553
+--- !u!114 &1952017329411999833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_ButtonClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_ButtonClick
+  Guid:
+    Data1: -1581715438
+    Data2: 1110110349
+    Data3: 2067368354
+    Data4: -2095045308
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1874
+--- !u!114 &3948384289158187113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_TextScroll
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_TextScroll
+  Guid:
+    Data1: -127697019
+    Data2: 1327055043
+    Data3: -1721529933
+    Data4: 1901684476
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1439
+--- !u!114 &4633934082737458561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instrumentalia_TheVibeVault
+  m_EditorClassIdentifier: 
+  Path: event:/Instrumentalia_TheVibeVault
+  Guid:
+    Data1: 168954731
+    Data2: 1108658107
+    Data3: 870252932
+    Data4: -227038970
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66608
+--- !u!114 &5421157925935450847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_CheersBoos
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_CheersBoos
+  Guid:
+    Data1: -1197342362
+    Data2: 1224538691
+    Data3: 1397222539
+    Data4: 1748042684
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21989
+--- !u!114 &6261583851708540297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instrumentalia_Apartment
+  m_EditorClassIdentifier: 
+  Path: event:/Instrumentalia_Apartment
+  Guid:
+    Data1: -2082792720
+    Data2: 1133620487
+    Data3: 1933859771
+    Data4: 1324996365
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 97344
+--- !u!114 &6720386371014560430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instrumentalia_Song3
+  m_EditorClassIdentifier: 
+  Path: event:/Instrumentalia_Song3
+  Guid:
+    Data1: 1916331905
+    Data2: 1328492432
+    Data3: -283643750
+    Data4: 364618860
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 99247
+--- !u!114 &8030801626724831981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Banks/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638617051905705173
+  FileSizes:
+  - Name: 
+    Value: 1366
+  Exists: 1
+--- !u!114 &8686115928075362838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_SpeechBubble
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_SpeechBubble
+  Guid:
+    Data1: 1622094178
+    Data2: 1215784615
+    Data3: 219756469
+    Data4: -1400787836
+  Banks:
+  - {fileID: 8740869263722337726}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1434
+--- !u!114 &8740869263722337726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Banks/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638617051905684607
+  FileSizes: []
+  Exists: 1
