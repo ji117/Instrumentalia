@@ -260,8 +260,8 @@ MonoBehaviour:
       Value: 
       HasValue: 0
     SpeakerMode:
-      Value: 0
-      HasValue: 0
+      Value: 3
+      HasValue: 1
     VirtualChannelCount:
       Value: 0
       HasValue: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
       HasValue: 1
     CallbackHandler:
       Value: {fileID: 0}
-      HasValue: 0
+      HasValue: 1
   OutputTypeName: 
   threadAffinities:
     Value: []
@@ -438,7 +438,7 @@ MonoBehaviour:
       HasValue: 0
     CallbackHandler:
       Value: {fileID: 0}
-      HasValue: 0
+      HasValue: 1
   OutputTypeName: 
   threadAffinities:
     Value: []
@@ -694,7 +694,7 @@ MonoBehaviour:
   ImportType: 0
   TargetAssetPath: FMODBanks
   TargetBankFolder: 
-  EventLinkage: 0
+  EventLinkage: 1
   LoggingLevel: 2
   SpeakerModeSettings: []
   SampleRateSettings: []
@@ -704,7 +704,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -718,7 +719,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131619
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131619
   Platforms:
   - {fileID: -1973026526799504895}

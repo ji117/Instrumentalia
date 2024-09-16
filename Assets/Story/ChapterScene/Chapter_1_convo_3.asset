@@ -41,5 +41,5 @@ MonoBehaviour:
     response1: 
     response2: 
     sentenceNumber: -2
-  background: {fileID: 21300000, guid: ff7496a855891dd4cb4a3bf50ffa0223, type: 3}
+  background: {fileID: 21300000, guid: a7a35e18f3e453c4b99018af7db658c6, type: 3}
   nextScene: {fileID: 11400000, guid: 24f1f21304d7c6d48a7722267b4a7ff8, type: 2}

@@ -8,13 +8,27 @@ public class Conducter : MonoBehaviour
     float bpm;
     float crotchet; //duration of one beat
     float offset;
-    float songposition; 
+    int songPosition;
+    FMOD.Studio.EventInstance eventInstance;
+
+    public StudioEventEmitter eventEmitter;
+
+
+    private void Awake()
+    {
+        eventInstance = eventEmitter.EventInstance;
+    }
 
     void Start()
     {
+         
+
         //song position = (current time of audio system - dsptime(song length?)) * song.pitch(speedofsong) - offset
-        //bpm = 
+        // bpm = eventEmitter.EventInstance
+
         //crotchet = 1/bps
+
+
     }
 
     
@@ -22,4 +36,13 @@ public class Conducter : MonoBehaviour
     {
         
     }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    
+
+
 }

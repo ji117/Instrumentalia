@@ -11,7 +11,7 @@ public class NoteArea : MonoBehaviour
     Collider2D noteCollidedWith;
     SpriteRenderer sr;
     Color original;
-    public GameController controller; 
+    
 
     private void Awake()
     {
@@ -25,14 +25,14 @@ public class NoteArea : MonoBehaviour
         {
             noteCollidedWith.gameObject.SetActive(false);
             Destroy(noteCollidedWith.gameObject);
-            controller.AddScore(200);
+            GameController.gameInstance.AddScore(200);
             Debug.Log("Perfect!");
         }
         else if (Input.GetKeyDown(key) && isNoteColliding && delay <= 0)
         {
             noteCollidedWith.gameObject.SetActive(false);
             Destroy(noteCollidedWith.gameObject);
-            controller.AddScore(100);
+            GameController.gameInstance.AddScore(100);
             Debug.Log("Good!");
         }
 

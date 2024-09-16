@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using FMODUnity;
 
 public class TextBoxController : MonoBehaviour
 {
@@ -13,8 +14,11 @@ public class TextBoxController : MonoBehaviour
     public ChapterScene currentScene;
     public GameObject decisionButton1;
     public GameObject decisionButton2;
+    public StudioEventEmitter typingEventEmitter;
+    public StudioEventEmitter speechEventEmitter;
+    public float volume = 0.1f;
 
-    [SerializeField] private int sentenceIndex = -1;
+    private int sentenceIndex = -1;
     private int choiceNumber = 0;
     private float originalDialogueSpeed = 0.02f;
     private float dialogueSpeed = 0.02f;
@@ -42,6 +46,8 @@ public class TextBoxController : MonoBehaviour
         StartCoroutine(TypeDialogue(currentScene.sentences[++sentenceIndex].text));
         speakerName.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         speakerPotrait.sprite = currentScene.sentences[sentenceIndex].speaker.speakerPotrait;
+        speechEventEmitter.Play();
+        speechEventEmitter.EventInstance.setVolume(0.05f);
     }
 
     public void PlayChoiceSentence(int playerChoice)
@@ -144,8 +150,16 @@ public class TextBoxController : MonoBehaviour
         state = State.PLAYING;
         int wordIndex = 0;
 
+        typingEventEmitter.Play();
+        typingEventEmitter.EventInstance.setVolume(volume);
         while(state != State.COMPLETED)
         {
+            if (typingEventEmitter.IsPlaying() == false) //not ideal looping like this unclean
+            {
+                typingEventEmitter.Play();
+                typingEventEmitter.EventInstance.setVolume(volume);
+            }
+            
             dialogue.text += text[wordIndex];
             yield return new WaitForSeconds(dialogueSpeed);
             if(++wordIndex == text.Length)
@@ -154,5 +168,6 @@ public class TextBoxController : MonoBehaviour
                 break;
             }
         }
+        typingEventEmitter.Stop();
     }
 }
