@@ -5,12 +5,14 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController gameInstance;
+    public LoadingScreen loadingScreen;
     [SerializeField] int score = 0;
     [SerializeField] int misses = 0;
     [SerializeField] int goods = 0;
     [SerializeField] int perfects = 0;
-    public bool songFinished = false;
-    public bool songStarted = false;
+    bool songFinished = false;
+    bool songStarted = false;
+    bool gameOver = false;
     void Awake()
     {
         gameInstance = this;
@@ -32,12 +34,12 @@ public class GameController : MonoBehaviour
 
         if (misses >= 10)
         {
-            Debug.Log("Game Over!");
+            gameOver = true;
         }
 
         if (songFinished)
         {
-            Debug.Log("Song Finished");
+            //todo 
         }
     }
 
@@ -84,5 +86,30 @@ public class GameController : MonoBehaviour
     public void SongFinished()
     {
         songFinished = true;
+    }
+
+    public void GameOver()
+    {
+        gameOver = true;
+    }
+
+    public bool IsSongFinished()
+    {
+        return songFinished;
+    }
+
+    public bool IsGameOver()
+    {
+        return gameOver; 
+    }
+
+    public bool IsSongStarted()
+    {
+        return songStarted; 
+    }
+
+    public void RestartGame()
+    {
+        loadingScreen.StartLoading(); 
     }
 }
