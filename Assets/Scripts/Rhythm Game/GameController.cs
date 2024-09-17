@@ -9,15 +9,27 @@ public class GameController : MonoBehaviour
     [SerializeField] int misses = 0;
     [SerializeField] int goods = 0;
     [SerializeField] int perfects = 0;
-    bool songFinished = false; 
+    public bool songFinished = false;
+    public bool songStarted = false;
     void Awake()
     {
         gameInstance = this;
     }
 
-    
+    private void Start()
+    {
+        
+    }
+
+
     void Update()
     {
+        if (Input.anyKeyDown && !songStarted)
+        {
+            ScriptUsageTimeline.instance.StartGame();
+            songStarted = true; 
+        }
+
         if (misses >= 10)
         {
             Debug.Log("Game Over!");

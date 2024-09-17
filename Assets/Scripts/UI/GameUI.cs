@@ -6,6 +6,7 @@ using TMPro;
 public class GameUI : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI startText;
     void Start()
     {
         
@@ -15,5 +16,10 @@ public class GameUI : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + GameController.gameInstance.GetScore();
+
+        if (GameController.gameInstance.songStarted)
+        {
+            startText.gameObject.SetActive(false); 
+        }
     }
 }

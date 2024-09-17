@@ -40,8 +40,13 @@ class ScriptUsageTimeline : MonoBehaviour
     void Start()
     {
         
-       // EventName = FMODUnity.EventReference.Find("event:/Instrumentalia_Song1");
        
+       
+        
+    }
+
+    public void StartGame()
+    {
         timelineInfo = new TimelineInfo();
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed

@@ -8,8 +8,8 @@ public class SceneController : MonoBehaviour
 {
     public ChapterScene currentScene;
     public TextBoxController textbox;
+    public LoadingScreen loadingScreen;
 
-    
     private bool isChoice = false;
     
 
@@ -55,6 +55,11 @@ public class SceneController : MonoBehaviour
                 }
                 if (textbox.IsLastSentence())
                 {
+                    if (currentScene.nextScene == null)
+                    {
+                        loadingScreen.StartLoading();
+                    }
+                    else
                     currentScene = currentScene.nextScene;
                     textbox.ResetSentenceIndex();
                     textbox.PlayScene(currentScene); 

@@ -17,6 +17,7 @@ public class TextBoxController : MonoBehaviour
     public StudioEventEmitter typingEventEmitter;
     public StudioEventEmitter speechEventEmitter;
     public float volume = 0.1f;
+    
 
     private int sentenceIndex = -1;
     private int choiceNumber = 0;
