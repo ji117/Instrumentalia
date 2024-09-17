@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     public StudioEventEmitter eventEmitterButton;
     public StudioEventEmitter eventEmitterBGM;
 
+    public GameObject press; //press image
+
     private float sfxVolume = 0.1f;
     private float bgmVolume = 0.1f;
 
@@ -23,6 +25,8 @@ public class MainMenu : MonoBehaviour
     {
         eventEmitterBGM.Play();
         eventEmitterBGM.EventInstance.setVolume(bgmVolume);
+
+        press.SetActive(false);
     }
 
     void Update()
@@ -37,7 +41,7 @@ public class MainMenu : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Back(); 
+            Back(); //ESC mainmenu
         }
 
     }
@@ -46,6 +50,8 @@ public class MainMenu : MonoBehaviour
     {
         eventEmitterButton.Play();
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
+
+        press.SetActive(true);
     }
 
     public void Settings()
@@ -67,6 +73,8 @@ public class MainMenu : MonoBehaviour
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
         settingsMenu.SetActive(false);
         mainMenu.SetActive(true);
+
+        press.SetActive(false);
     }
 
     public void SFXChange()
