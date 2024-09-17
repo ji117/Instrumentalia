@@ -20,10 +20,13 @@ public class Detector : MonoBehaviour
 
     private void Update()
     {
-        if (noteColliding && secondDetector.IsNoteColliding())
-            collidingWithBoth = true;
-        else
-            collidingWithBoth = false;
+        if (!GameController.gameInstance.IsGameOver())
+        {
+            if (noteColliding && secondDetector.IsNoteColliding())
+                collidingWithBoth = true;
+            else
+                collidingWithBoth = false;
+        }
     }
 
     public bool IsBothColliding()

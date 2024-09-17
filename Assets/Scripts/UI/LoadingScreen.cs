@@ -38,7 +38,13 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator LoadLevel()
     {
-        bgmEmitter.Stop();
+        if (game.CompareTag("Game"))
+        {
+            ScriptUsageTimeline.instance.GetMusicInstance().stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        else 
+        bgmEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        
         yield return new WaitForSeconds(5.0f);
         SceneManager.LoadSceneAsync(sceneToLoad);
     }

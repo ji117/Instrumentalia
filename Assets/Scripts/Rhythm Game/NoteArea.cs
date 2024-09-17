@@ -21,25 +21,28 @@ public class NoteArea : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(key) && detector.IsBothColliding() && delay <= 0)
+        if (!GameController.gameInstance.IsGameOver())
         {
-            noteCollidedWith.gameObject.SetActive(false);
-            Destroy(noteCollidedWith.gameObject);
-            GameController.gameInstance.AddScore(200);
-            Debug.Log("Perfect!");
-        }
-        else if (Input.GetKeyDown(key) && isNoteColliding && delay <= 0)
-        {
-            noteCollidedWith.gameObject.SetActive(false);
-            Destroy(noteCollidedWith.gameObject);
-            GameController.gameInstance.AddScore(100);
-            Debug.Log("Good!");
-        }
+            if (Input.GetKeyDown(key) && detector.IsBothColliding() && delay <= 0)
+            {
+                noteCollidedWith.gameObject.SetActive(false);
+                Destroy(noteCollidedWith.gameObject);
+                GameController.gameInstance.AddScore(200);
+                Debug.Log("Perfect!");
+            }
+            else if (Input.GetKeyDown(key) && isNoteColliding && delay <= 0)
+            {
+                noteCollidedWith.gameObject.SetActive(false);
+                Destroy(noteCollidedWith.gameObject);
+                GameController.gameInstance.AddScore(100);
+                Debug.Log("Good!");
+            }
 
-        if (Input.GetKeyDown(key) && delay <= 0)
-        {
-            StartCoroutine(Pressed());
-            delay = 2.0f;
+            if (Input.GetKeyDown(key) && delay <= 0)
+            {
+                StartCoroutine(Pressed());
+                delay = 2.0f;
+            }
         }
 
     }

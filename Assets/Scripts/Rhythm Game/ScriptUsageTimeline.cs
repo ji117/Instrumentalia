@@ -63,47 +63,60 @@ class ScriptUsageTimeline : MonoBehaviour
         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
         musicInstance.start();
         musicInstance.setVolume(0.1f);
+
+        eventEmitter.Play();
+        eventEmitter.EventInstance.setVolume(0f);
     }
 
     private void Update()
     {
-        if (lastMarkerString != timelineInfo.lastMarker)
+        if (GameController.gameInstance.IsSongStarted())
         {
-            lastMarkerString = timelineInfo.lastMarker;
-
-            if (MarkerUpdated != null)
+            if (lastMarkerString != timelineInfo.lastMarker)
             {
-                MarkerUpdated();
+                lastMarkerString = timelineInfo.lastMarker;
+
+                if (MarkerUpdated != null)
+                {
+                    MarkerUpdated();
+                }
+            }
+
+            if (lastBeat != timelineInfo.currentMusicBar)
+            {
+                lastBeat = timelineInfo.currentMusicBar;
+
+                if (BeatUpdated != null)
+                {
+                    BeatUpdated();
+                }
+            }
+
+            if (!eventEmitter.IsPlaying())
+            {
+                GameController.gameInstance.SongFinished();
             }
         }
+    }
 
-        if (lastBeat != timelineInfo.currentMusicBar)
-        {
-            lastBeat = timelineInfo.currentMusicBar;
-
-            if (BeatUpdated != null)
-            {
-                BeatUpdated();
-            }
-        }
-
-        //if(musicInstance.) todo
-        //{
-        //    GameController.gameInstance.SongFinished();
-        //}
+    public FMOD.Studio.EventInstance GetMusicInstance()
+    {
+        return musicInstance; 
     }
 
     void OnDestroy()
     {
         musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         musicInstance.release();
-        UnityEngine.Debug.Log("Instance Destroyed");
     }
 
     void OnGUI()
     {
-       GUILayout.Box(String.Format("Current Bar = {0}, Current Beat = {1}, Last Marker = {2}", timelineInfo.currentMusicBar, timelineInfo.currentMusicBeat, (string)timelineInfo.lastMarker));
-       // GUILayout.Box(String.Format("Current Beat = {0}", timelineInfo.CurrentMusicBeat));
+        if (GameController.gameInstance.IsSongStarted())
+        {
+            GUILayout.Box(String.Format("Current Bar = {0}, Current Beat = {1}, Last Marker = {2}", timelineInfo.currentMusicBar, timelineInfo.currentMusicBeat, (string)timelineInfo.lastMarker));
+            // GUILayout.Box(String.Format("Current Beat = {0}", timelineInfo.CurrentMusicBeat));
+        }
     }
 
     [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
@@ -144,6 +157,11 @@ class ScriptUsageTimeline : MonoBehaviour
                         timelineHandle.Free();
                         break;
                     }
+                //case FMOD.Studio.EVENT_CALLBACK_TYPE.STOPPED:
+                //    {
+                //        GameController.gameInstance.SongFinished();
+                //        break;
+                //    }
             }
         }
         return FMOD.RESULT.OK;
