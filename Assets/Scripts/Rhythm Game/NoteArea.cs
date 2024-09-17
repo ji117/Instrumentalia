@@ -28,14 +28,14 @@ public class NoteArea : MonoBehaviour
                 noteCollidedWith.gameObject.SetActive(false);
                 Destroy(noteCollidedWith.gameObject);
                 GameController.gameInstance.AddScore(200);
-                Debug.Log("Perfect!");
+                GameController.gameInstance.AddPerfect();
             }
             else if (Input.GetKeyDown(key) && isNoteColliding && delay <= 0)
             {
                 noteCollidedWith.gameObject.SetActive(false);
                 Destroy(noteCollidedWith.gameObject);
                 GameController.gameInstance.AddScore(100);
-                Debug.Log("Good!");
+                GameController.gameInstance.AddGood();
             }
 
             if (Input.GetKeyDown(key) && delay <= 0)

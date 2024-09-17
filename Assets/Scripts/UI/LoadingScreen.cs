@@ -11,12 +11,13 @@ public class LoadingScreen : MonoBehaviour
     public GameObject game;
     public GameObject loadingScreen;
     public int sceneToLoad;
+    public int currentScene;
     public TextMeshProUGUI loadingText;
     public string[] hints;
     public StudioEventEmitter bgmEmitter;
     
 
-    public void StartLoading()
+    public void StartLoading(int scene)
     {
         game.SetActive(false);
         loadingScreen.SetActive(true);
@@ -33,10 +34,10 @@ public class LoadingScreen : MonoBehaviour
                 break;
         }
 
-        StartCoroutine(LoadLevel());
+        StartCoroutine(LoadLevel(scene));
     }
 
-    IEnumerator LoadLevel()
+    IEnumerator LoadLevel(int scene)
     {
         if (game.CompareTag("Game"))
         {
@@ -45,7 +46,7 @@ public class LoadingScreen : MonoBehaviour
         else 
         bgmEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(3.0f);
         SceneManager.LoadSceneAsync(sceneToLoad);
     }
 }

@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Rhythm_Game.unity
+    guid: e0c97194555c08e4e8d4dc767d7cf3b4
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Rhythm_game.unity
-    guid: e0c97194555c08e4e8d4dc767d7cf3b4
+    path: Assets/Scenes/Chapter_1_Pre_Gig.unity
+    guid: 3f7da5bb9d600f94aa4f0fc2fbf83ce4
+  - enabled: 1
+    path: Assets/Scenes/Chapter_1_Post_Gig.unity
+    guid: 6e796afa769d8634ba5a1d5f3f1ef4a5
   m_configObjects: {}

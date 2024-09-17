@@ -57,7 +57,7 @@ public class SceneController : MonoBehaviour
                 {
                     if (currentScene.nextScene == null)
                     {
-                        loadingScreen.StartLoading();
+                        loadingScreen.StartLoading(loadingScreen.sceneToLoad);
                     }
                     else
                     currentScene = currentScene.nextScene;
