@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MainMenu : MonoBehaviour
     public StudioEventEmitter eventEmitterBGM;
 
     public GameObject press; //press image
+    public GameObject hover; //hover image
 
     private float sfxVolume = 0.1f;
     private float bgmVolume = 0.1f;
@@ -27,6 +29,7 @@ public class MainMenu : MonoBehaviour
         eventEmitterBGM.EventInstance.setVolume(bgmVolume);
 
         press.SetActive(false);
+        hover.SetActive(false);
     }
 
     void Update()
@@ -46,6 +49,18 @@ public class MainMenu : MonoBehaviour
 
     }
 
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        hover.SetActive(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        hover.SetActive(false);
+    }
+    
+    
+    
     public void Play()
     {
         eventEmitterButton.Play();
