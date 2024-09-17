@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class MainMenu : MonoBehaviour
     public StudioEventEmitter eventEmitterButton;
     public StudioEventEmitter eventEmitterBGM;
 
+    public GameObject press; //press image
+    public GameObject hover; //hover image
+
     private float sfxVolume = 0.1f;
     private float bgmVolume = 0.1f;
 
@@ -23,6 +27,9 @@ public class MainMenu : MonoBehaviour
     {
         eventEmitterBGM.Play();
         eventEmitterBGM.EventInstance.setVolume(bgmVolume);
+
+        press.SetActive(false);
+        hover.SetActive(false);
     }
 
     void Update()
@@ -35,12 +42,31 @@ public class MainMenu : MonoBehaviour
             eventEmitter.EventInstance.setVolume(sfxVolume);
             eventEmitter.TriggerOnce = true; 
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Back(); //ESC mainmenu
+        }
+
     }
 
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        hover.SetActive(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        hover.SetActive(false);
+    }
+    
+    
+    
     public void Play()
     {
         eventEmitterButton.Play();
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
+
+        press.SetActive(true);
     }
 
     public void Settings()
@@ -62,6 +88,8 @@ public class MainMenu : MonoBehaviour
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
         settingsMenu.SetActive(false);
         mainMenu.SetActive(true);
+
+        press.SetActive(false);
     }
 
     public void SFXChange()
