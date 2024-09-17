@@ -35,6 +35,11 @@ public class MainMenu : MonoBehaviour
             eventEmitter.EventInstance.setVolume(sfxVolume);
             eventEmitter.TriggerOnce = true; 
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Back(); 
+        }
+
     }
 
     public void Play()
