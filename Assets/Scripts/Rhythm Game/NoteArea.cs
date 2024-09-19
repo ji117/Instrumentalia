@@ -41,7 +41,7 @@ public class NoteArea : MonoBehaviour
             if (Input.GetKeyDown(key) && delay <= 0)
             {
                 StartCoroutine(Pressed());
-                delay = 2.0f;
+                delay = 1.0f;
             }
         }
 

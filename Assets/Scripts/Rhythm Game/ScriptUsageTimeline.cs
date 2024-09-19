@@ -24,12 +24,14 @@ class ScriptUsageTimeline : MonoBehaviour
     private FMOD.Studio.EventInstance musicInstance;
 
     public delegate void BeatEventDelegate();
+    public static event BeatEventDelegate BarUpdated;
     public static event BeatEventDelegate BeatUpdated;
 
     public delegate void MarkerListenerDelegate();
-    public static event MarkerListenerDelegate MarkerUpdated; 
+    public static event MarkerListenerDelegate MarkerUpdated;
 
-    public static int lastBeat = 0;
+    public static int lastBeat = 0; 
+    public static int lastBar = 0;
     public static string lastMarkerString = null;
 
     private void Awake()
@@ -82,9 +84,19 @@ class ScriptUsageTimeline : MonoBehaviour
                 }
             }
 
-            if (lastBeat != timelineInfo.currentMusicBar)
+            if (lastBar != timelineInfo.currentMusicBar)
             {
-                lastBeat = timelineInfo.currentMusicBar;
+                lastBar = timelineInfo.currentMusicBar;
+
+                if (BarUpdated != null)
+                {
+                    BarUpdated();
+                }
+            }
+
+            if (lastBeat != timelineInfo.currentMusicBeat)
+            {
+                lastBeat = timelineInfo.currentMusicBeat;
 
                 if (BeatUpdated != null)
                 {
@@ -115,7 +127,6 @@ class ScriptUsageTimeline : MonoBehaviour
         if (GameController.gameInstance.IsSongStarted())
         {
             GUILayout.Box(String.Format("Current Bar = {0}, Current Beat = {1}, Last Marker = {2}", timelineInfo.currentMusicBar, timelineInfo.currentMusicBeat, (string)timelineInfo.lastMarker));
-            // GUILayout.Box(String.Format("Current Beat = {0}", timelineInfo.CurrentMusicBeat));
         }
     }
 
@@ -157,11 +168,6 @@ class ScriptUsageTimeline : MonoBehaviour
                         timelineHandle.Free();
                         break;
                     }
-                //case FMOD.Studio.EVENT_CALLBACK_TYPE.STOPPED:
-                //    {
-                //        GameController.gameInstance.SongFinished();
-                //        break;
-                //    }
             }
         }
         return FMOD.RESULT.OK;

@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
 
         if (misses >= 10)
         {
-            gameOver = true;
+            //gameOver = true;
         }
 
         if (songFinished)

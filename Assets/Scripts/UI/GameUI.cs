@@ -14,6 +14,8 @@ public class GameUI : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
 
+    private float endGameTimer = 10.0f; 
+
     void Start()
     {
         
@@ -38,7 +40,7 @@ public class GameUI : MonoBehaviour
             }
         }
 
-        if (GameController.gameInstance.IsSongFinished())
+        if (GameController.gameInstance.IsSongFinished() && endGameTimer < 0f)
         {
             levelCompleteScreen.SetActive(true);
             levelCompleteScoreText.text = "Score: " + GameController.gameInstance.GetScore();
@@ -49,6 +51,14 @@ public class GameUI : MonoBehaviour
             {
                 GameController.gameInstance.RestartGame();
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameController.gameInstance.IsSongFinished())
+        {
+            endGameTimer =  endGameTimer - 0.1f;
         }
     }
 }
