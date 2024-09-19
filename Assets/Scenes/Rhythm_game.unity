@@ -267,6 +267,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6720815356374725551, guid: f7ae1f2a55225ab4ea8deae537e26cbd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6720815356374725551, guid: f7ae1f2a55225ab4ea8deae537e26cbd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.006031
+      objectReference: {fileID: 0}
     - target: {fileID: 8690834558756097685, guid: f7ae1f2a55225ab4ea8deae537e26cbd, type: 3}
       propertyPath: m_Name
       value: Game Over Screen
@@ -455,6 +463,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1800861845875392463, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800861845875392463, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.012512
+      objectReference: {fileID: 0}
     - target: {fileID: 3069305596760393312, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
       propertyPath: m_SizeDelta.x
       value: 337.5026
@@ -585,6 +601,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460779646152114377, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1351.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 460779646152114377, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0023136
+      objectReference: {fileID: 0}
     - target: {fileID: 1618378341388757755, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: m_Name
       value: Loading Screen
@@ -683,7 +707,7 @@ PrefabInstance:
       objectReference: {fileID: 1313791005}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: sceneToLoad
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1127,6 +1151,18 @@ PrefabInstance:
     - target: {fileID: 3355736922495103604, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833988496319161206, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833988496319161206, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000046829
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833988496319161206, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.012493
       objectReference: {fileID: 0}
     - target: {fileID: 5282767544023599707, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
       propertyPath: missText
