@@ -707,7 +707,7 @@ PrefabInstance:
       objectReference: {fileID: 1313791005}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: sceneToLoad
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1133,12 +1133,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1702765053702885622, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702765053702885622, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -847.7
       objectReference: {fileID: 0}
     - target: {fileID: 1702765053702885622, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 443.9
+      value: 492
       objectReference: {fileID: 0}
     - target: {fileID: 3355736922495103604, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
       propertyPath: m_UiScaleMode
@@ -1384,6 +1388,10 @@ PrefabInstance:
     - target: {fileID: 2696035046153110693, guid: 36aab7f8536be2c46875cd49f32190f2, type: 3}
       propertyPath: m_Name
       value: Rhythmn Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696035046153110693, guid: 36aab7f8536be2c46875cd49f32190f2, type: 3}
+      propertyPath: m_TagString
+      value: Game
       objectReference: {fileID: 0}
     - target: {fileID: 3445757172217338639, guid: 36aab7f8536be2c46875cd49f32190f2, type: 3}
       propertyPath: m_LocalPosition.z

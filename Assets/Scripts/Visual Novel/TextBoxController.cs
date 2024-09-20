@@ -89,9 +89,9 @@ public class TextBoxController : MonoBehaviour
         return choiceNumber;
     }
 
-    public void IncrementChoiceIndex()
+    public void ResetChoiceIndex()
     {
-        choiceNumber++;
+        choiceNumber = 0;
     }
 
     public void ResetSentenceIndex()

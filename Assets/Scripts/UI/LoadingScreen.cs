@@ -45,8 +45,7 @@ public class LoadingScreen : MonoBehaviour
         }
         else 
         bgmEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadSceneAsync(sceneToLoad);
+        SceneManager.LoadSceneAsync(scene);
     }
 }
