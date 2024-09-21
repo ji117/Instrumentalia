@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e54c41945dfa54fabf02ae3769fa24, type: 3}
+  m_Name: Chapter_1_convo_3_v2
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: "Nice work! And here\u2019s your prize\u2026 A beer!"
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "\u2026 and his other one?"
+    speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
+  - text: "Ah, alright\u2026 Two beers!"
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "Not bad >PLAYER NAME< and you know what, there\u2019s not many bass guitarists
+      down here either. Bands formations are kind of at your mercy, if that\u2019s
+      what you\u2019re looking for."
+    speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
+  - text: "If that wasn\u2019t a hint, I don\u2019t know what is. Anyway\u2026 Good
+      job."
+    speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+  - text: "Ha\u2026 Pick me! Lol! No seriously\u2026 No pressure! Well\u2026"
+    speaker: {fileID: 11400000, guid: 0a8b447c759f5a34eb063489c9cbe4ad, type: 2}
+  - text: "It\u2019s closing time soon guys\u2026 Better drink up."
+    speaker: {fileID: 11400000, guid: 2cb855c285abcdf4aa22f756bde9baf1, type: 2}
+  - text: "Sorry guys\u2026 We\u2019re about to close. Gonna have to ask you to drink
+      up and herd you towards the door. "
+    speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
+  - text: 'What? '
+    speaker: {fileID: 11400000, guid: e44c65ebe51753c4faad93f1646a90b8, type: 2}
+  - text: "I said\u2026"
+    speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
+  - text: "Ha, right on cue\u2026 it\u2019s ok Ryan, she heard you! It\u2019s no
+      wonder your name\u2019s Echo sometimes dude."
+    speaker: {fileID: 11400000, guid: 2cb855c285abcdf4aa22f756bde9baf1, type: 2}
+  - text: "\u2026"
+    speaker: {fileID: 11400000, guid: e44c65ebe51753c4faad93f1646a90b8, type: 2}
+  - text: "Well, as they say in music\u2026 Night ends on a good note. I\u2019ve
+      got a bus to catch but take our numbers if you like >PLAYER NAME< and drop
+      us a message sometime dude."
+    speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
+  choices:
+  - choiceSentences: []
+    response1: 
+    response2: 
+    sentenceNumber: -1
+  background: {fileID: 21300000, guid: eb12678e00a41114e8eec3d3baad81c7, type: 3}
+  nextScene: {fileID: 0}

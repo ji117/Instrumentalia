@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e54c41945dfa54fabf02ae3769fa24, type: 3}
+  m_Name: Chapter_1_convo_1_v2
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: "So\u2026 Welcome to Synth City dude. You\u2019re finally here! Don\u2019t
+      worry about that busted bass guitar of yours. There\u2019s someone in there
+      I know who\u2019ll do you a good price. "
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "It\u2019ll be a lot easier to hang out, now you\u2019re finally moved
+      in here, >PLAYER NAME< . Social media friends are hardly real friends. Come
+      on, take a seat. These are the guys Zack and I mentioned."
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "This place, Vibe Vault started this new trend\u2026 Releasing the venue\u2019s
+      music theme on the night\u2026 Then volunteers from the crowd participate.
+      Even soloists are welcome tonight as two of the owners are providing the backing.
+      Up for it? "
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "And speaking of drums, hey >PLAYER NAME< I\u2019m Lyra. I play steel drums
+      and violin. Of course if you want something completely different, try this
+      guy."
+    speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+  - text: "I could do some whining and use that to play the victim if I wanted an
+      excuse to leave but\u2026 I\u2019ve still got a beer to finish, so I\u2019ll
+      take it as a compliment. Yeah, hi, I\u2019m Vex\u2026 I play accordion and
+      acoustic guitar. Huh? "
+    speaker: {fileID: 11400000, guid: 2cb855c285abcdf4aa22f756bde9baf1, type: 2}
+  - text: "Hey >PLAYER NAME< Zack told me about the bass guitar. Don\u2019t worry,
+      down here, there\u2019s always someone that knows someone that can tune things
+      up here. I\u2019ve had to get my keyboard and saxophone seen to at least once
+      each\u2026 I\u2019m Echo. Nice to meet you at last."
+    speaker: {fileID: 11400000, guid: e44c65ebe51753c4faad93f1646a90b8, type: 2}
+  - text: "And I\u2019m the black sheep on piano and cello, Melodi, if you wanna
+      know. Know they\u2019re not as hip but I like \u2018em. "
+    speaker: {fileID: 11400000, guid: 0a8b447c759f5a34eb063489c9cbe4ad, type: 2}
+  - text: "That\u2019s two more than some of us can play Melodi. Zack and I don\u2019t
+      play anything at all. It\u2019s a wonder why we share tables with you guys
+      sometimes."
+    speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+  - text: "Yeah, well that\u2019s because you\u2019re good at picking the spots.
+      Besides\u2026 It\u2019s nice to talk about other stuff."
+    speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
+  - text: "I\u2019ll have you know I take my instrument very seriously. "
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "What instrument\u2026 Your beer bottle?"
+    speaker: {fileID: 11400000, guid: 5511ecb6d58efbc43953dcd00fb89df6, type: 2}
+  - text: "Durr\u2026 What else? I get to sit here and drink whilst you lot get up
+      and provide my entertainment. Tell you what, though I wouldn\u2019t recommend
+      them as a pair of cheerleader pom poms!"
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "Yeah, funny that! You still haven\u2019t paid me to get those jeans washed
+      you ruined. They absolutely stunk."
+    speaker: {fileID: 11400000, guid: 2cb855c285abcdf4aa22f756bde9baf1, type: 2}
+  - text: "Oh my God! It was an accident, get over it\u2026 Anyway\u2026 Speaking
+      of entertainment\u2026 >PLAYER NAME< Off you go\u2026 You\u2019re next on stage,
+      you\u2019re welcome! "
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: I know how you feel >PLAYER NAME< They got me the same way when they marched
+      me in here!
+    speaker: {fileID: 11400000, guid: e44c65ebe51753c4faad93f1646a90b8, type: 2}
+  - text: Just go for it! Just think about the beer! Feel the beer! Become one with
+      the beer!
+    speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
+  - text: "I know how you feel >PLAYER NAME< Seriously though, it\u2019s best just
+      to push through it. Just take your time."
+    speaker: {fileID: 11400000, guid: 0a8b447c759f5a34eb063489c9cbe4ad, type: 2}
+  choices:
+  - choiceSentences:
+    - text: "Doesn\u2019t matter >PLAYER NAME< you can put a twist on any song nowadays.
+        You can turn something rock into tropical, something classic into dubstep,
+        acoustic into club. Anything goes. I\u2019m Sion by the way. My sets, I usually
+        perform something with drums or trumpet."
+      speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
+    - text: "Doesn\u2019t matter >PLAYER NAME< you can put a twist on any song nowadays.
+        You can turn something rock into tropical, something classic into dubstep,
+        acoustic into club. Anything goes. I\u2019m Sion by the way. My sets, I usually
+        perform something with drums or trumpet."
+      speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
+    response1: "Depends\u2026 What are you in the mood for?"
+    response2: "I just got here\u2026 I have no idea what the \u2018vibe\u2019 is
+      in here."
+    sentenceNumber: 2
+  - choiceSentences:
+    - text: "Consider it your initiation. Ryan, the manager over there. Spoke to
+        him earlier. He\u2019s got a spare bass guitar he\u2019s lending you, go
+        say \u2018hello\u2019. Do a good job, we may even get a free round of drinks."
+      speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+    - text: "Consider it your initiation. Ryan, the manager over there. Spoke to
+        him earlier. He\u2019s got a spare bass guitar he\u2019s lending you, go
+        say \u2018hello\u2019. Do a good job, we may even get a free round of drinks."
+      speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
+    response1: Wait, sorry, what?
+    response2: "Me\u2026? On stage...? Now\u2026?"
+    sentenceNumber: 13
+  background: {fileID: 21300000, guid: eb12678e00a41114e8eec3d3baad81c7, type: 3}
+  nextScene: {fileID: 11400000, guid: 292d85678c324bc4abff3f2188a0bfb1, type: 2}

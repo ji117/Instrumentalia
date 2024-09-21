@@ -7,7 +7,14 @@ public class GameUI : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI startText;
-    public GameObject gameOverScreen; 
+    public TextMeshProUGUI levelCompleteScoreText;
+    public TextMeshProUGUI missText;
+    public TextMeshProUGUI goodsText;
+    public TextMeshProUGUI perfectsText;
+    public GameObject gameOverScreen;
+    public GameObject levelCompleteScreen;
+
+    private float endGameTimer = 10.0f; 
 
     void Start()
     {
@@ -33,13 +40,25 @@ public class GameUI : MonoBehaviour
             }
         }
 
-        if (GameController.gameInstance.IsSongFinished())
+        if (GameController.gameInstance.IsSongFinished() && endGameTimer < 0f)
         {
-            gameOverScreen.SetActive(true);
+            levelCompleteScreen.SetActive(true);
+            levelCompleteScoreText.text = "Score: " + GameController.gameInstance.GetScore();
+            goodsText.text = "Good x " + GameController.gameInstance.GetGoods();
+            perfectsText.text = "Perfects x " + GameController.gameInstance.GetPerfects();
+            missText.text = "Miss x " + GameController.gameInstance.GetMisses();
             if (Input.GetKeyDown(KeyCode.R))
             {
                 GameController.gameInstance.RestartGame();
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameController.gameInstance.IsSongFinished())
+        {
+            endGameTimer =  endGameTimer - 0.1f;
         }
     }
 }

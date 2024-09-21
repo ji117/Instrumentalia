@@ -23,7 +23,6 @@ public class SceneController : MonoBehaviour
         {
             if (textbox.MakeChoice())
             {
-                textbox.IncrementChoiceIndex();
                 isChoice = false;
                 textbox.ChoiceMade();
                 textbox.decisionButton1.SetActive(false);
@@ -43,7 +42,7 @@ public class SceneController : MonoBehaviour
                 textbox.ResetDialogueSpeed();
                 if (textbox.GetChoiceIndex() < textbox.currentScene.choices.Count)
                 {
-                    if (textbox.currentScene.choices[textbox.GetChoiceIndex()].sentenceNumber == textbox.GetSentenceIndex() /*&& isChoice == false*/)
+                    if (textbox.currentScene.choices[textbox.GetChoiceIndex()].sentenceNumber == textbox.GetSentenceIndex() && isChoice == false)
                     {
                         textbox.decisionButton1.SetActive(true);
                         textbox.decisionButton2.SetActive(true);
@@ -57,13 +56,15 @@ public class SceneController : MonoBehaviour
                 {
                     if (currentScene.nextScene == null)
                     {
-                        loadingScreen.StartLoading();
+                        loadingScreen.StartLoading(loadingScreen.sceneToLoad);
                     }
                     else
                     currentScene = currentScene.nextScene;
                     textbox.ResetSentenceIndex();
+                    textbox.ResetChoiceIndex();
                     textbox.PlayScene(currentScene); 
                 }
+                if (textbox.isActiveAndEnabled)
                 textbox.PlayNextSentence();
             }
         }

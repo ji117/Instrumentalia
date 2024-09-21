@@ -110,6 +110,6 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        loadingScreen.StartLoading(); 
+        loadingScreen.StartLoading(loadingScreen.currentScene); 
     }
 }
