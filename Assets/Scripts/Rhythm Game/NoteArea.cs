@@ -68,7 +68,7 @@ public class NoteArea : MonoBehaviour
 
     IEnumerator Pressed()
     {
-        sr.color = new Color(0, 0, 0);
+        sr.color = new Color(1, 1, 0);
         yield return new WaitForSeconds(0.2f);
         sr.color = original;
     }
