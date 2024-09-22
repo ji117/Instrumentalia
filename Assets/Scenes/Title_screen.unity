@@ -272,6 +272,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35677099}
   m_CullTransparentMesh: 1
+--- !u!1 &37431260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37431262}
+  - component: {fileID: 37431261}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &37431261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37431260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3190f49a526482242822d4331329f2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reputation: 0
+  bgmVolume: 0.1
+  sfxVolume: 0.1
+--- !u!4 &37431262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37431260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1123.5773, y: 521.56915, z: -6.268185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &61925226
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +363,10 @@ PrefabInstance:
     - target: {fileID: 1618378341388757755, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: m_Name
       value: Loading Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618378341388757755, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3461123452096374161, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: m_Pivot.x
@@ -400,15 +451,11 @@ PrefabInstance:
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 472865954}
+      objectReference: {fileID: 729205667}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: bgmEmitter
       value: 
       objectReference: {fileID: 1175339970}
-    - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
-      propertyPath: currentScene
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3661,3 +3708,4 @@ SceneRoots:
   - {fileID: 1952265091}
   - {fileID: 1820161070}
   - {fileID: 144668246}
+  - {fileID: 37431262}

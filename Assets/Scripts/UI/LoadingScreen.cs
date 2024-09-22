@@ -21,7 +21,7 @@ public class LoadingScreen : MonoBehaviour
     {
         game.SetActive(false);
         loadingScreen.SetActive(true);
-        int textToLoad = Random.Range(1, 2);
+        int textToLoad = Random.Range(1, 3);
 
         switch(textToLoad)
         {

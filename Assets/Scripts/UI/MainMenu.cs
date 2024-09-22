@@ -66,6 +66,8 @@ public class MainMenu : MonoBehaviour
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
+        bgmSlider.value = Player.instance.GetBGMVolume();
+        sfxSlider.value = Player.instance.GetSFXVolume();
     }
 
     public void Quit()
@@ -87,12 +89,19 @@ public class MainMenu : MonoBehaviour
     {
         sfxVolume = sfxSlider.value;
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
+        Player.instance.SetSFXVolume(sfxVolume);
+        if (!eventEmitterButton.IsPlaying())
+        {
+            eventEmitterButton.Play();
+            eventEmitterButton.EventInstance.setVolume(sfxVolume);
+        }
     }
 
     public void BGMChange()
     {
         bgmVolume = bgmSlider.value;
         eventEmitterBGM.EventInstance.setVolume(bgmVolume);
+        Player.instance.SetBGMVolume(bgmVolume);
     }
 
     private void OnDestroy()

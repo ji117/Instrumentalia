@@ -342,6 +342,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &298590541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7284465057817573746, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
+  m_PrefabInstance: {fileID: 949510032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &301385180
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,74 +474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1800861845875392463, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 1800861845875392463, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.012512
-      objectReference: {fileID: 0}
-    - target: {fileID: 3069305596760393312, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 337.5026
-      objectReference: {fileID: 0}
-    - target: {fileID: 3069305596760393312, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 48.6249
-      objectReference: {fileID: 0}
-    - target: {fileID: 3069305596760393312, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 59.75132
-      objectReference: {fileID: 0}
-    - target: {fileID: 3069305596760393312, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 135.68755
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1135266731}
-    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartLoading
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LoadingScreen, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060036883586853614, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 266.6074
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060036883586853614, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 47.7798
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060036883586853614, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 26.30371
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060036883586853614, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -109.88989
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071626976406821707, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
-      propertyPath: m_Name
-      value: Level Complete Score Text
-      objectReference: {fileID: 0}
     - target: {fileID: 8388712920645357177, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
       propertyPath: m_Name
       value: Level Complete Screen
@@ -792,7 +739,7 @@ Transform:
   m_GameObject: {fileID: 1101877961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.87, y: 8, z: 0}
+  m_LocalPosition: {x: 2.149, y: 8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -887,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 1224173676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.63, y: 8, z: 0}
+  m_LocalPosition: {x: -3.013, y: 8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1034,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 1426966761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.12, y: 8, z: 0}
+  m_LocalPosition: {x: -1.277, y: 8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1118,7 +1065,7 @@ Transform:
   m_GameObject: {fileID: 1734484421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36, y: 8, z: 0}
+  m_LocalPosition: {x: 0.465, y: 8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1168,6 +1115,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012493
       objectReference: {fileID: 0}
+    - target: {fileID: 5282767544023599707, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
+      propertyPath: repText
+      value: 
+      objectReference: {fileID: 298590541}
     - target: {fileID: 5282767544023599707, guid: 688f0e83ec5b77f4089b30ed92875912, type: 3}
       propertyPath: missText
       value: 

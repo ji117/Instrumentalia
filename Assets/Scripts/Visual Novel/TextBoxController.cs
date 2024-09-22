@@ -16,7 +16,7 @@ public class TextBoxController : MonoBehaviour
     public GameObject decisionButton2;
     public StudioEventEmitter typingEventEmitter;
     public StudioEventEmitter speechEventEmitter;
-    public float volume = 0.1f;
+    public float volume;
     
 
     private int sentenceIndex = -1;
@@ -36,6 +36,12 @@ public class TextBoxController : MonoBehaviour
     private void Start()
     {
         PlayNextSentence();
+
+        if (Player.instance == null)
+            volume = 0.1f;
+        else
+            volume = Player.instance.GetSFXVolume();
+
     }
     public void PlayScene(ChapterScene scene)
     {
@@ -48,7 +54,7 @@ public class TextBoxController : MonoBehaviour
         speakerName.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         speakerPotrait.sprite = currentScene.sentences[sentenceIndex].speaker.speakerPotrait;
         speechEventEmitter.Play();
-        speechEventEmitter.EventInstance.setVolume(0.05f);
+        speechEventEmitter.EventInstance.setVolume(volume);
     }
 
     public void PlayChoiceSentence(int playerChoice)
@@ -56,6 +62,8 @@ public class TextBoxController : MonoBehaviour
         StartCoroutine(TypeDialogue(currentScene.choices[choiceNumber].choiceSentences[playerChoice].text));
         speakerName.text = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerName;
         speakerPotrait.sprite = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerPotrait;
+        speechEventEmitter.Play();
+        speechEventEmitter.EventInstance.setVolume(volume);
         choiceNumber++;
     }
 
@@ -170,5 +178,14 @@ public class TextBoxController : MonoBehaviour
             }
         }
         typingEventEmitter.Stop();
+    }
+
+    private void OnDestroy()
+    {
+        typingEventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        typingEventEmitter.EventInstance.release();
+        speechEventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        speechEventEmitter.EventInstance.release();
+
     }
 }

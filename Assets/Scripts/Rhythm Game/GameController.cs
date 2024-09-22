@@ -18,11 +18,6 @@ public class GameController : MonoBehaviour
         gameInstance = this;
     }
 
-    private void Start()
-    {
-        
-    }
-
 
     void Update()
     {
@@ -37,9 +32,14 @@ public class GameController : MonoBehaviour
             gameOver = true;
         }
 
-        if (songFinished)
+        //if (songFinished)
+        //{
+           
+        //}
+
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            //todo 
+            songFinished = true; 
         }
     }
 
@@ -111,5 +111,24 @@ public class GameController : MonoBehaviour
     public void RestartGame()
     {
         loadingScreen.StartLoading(loadingScreen.currentScene); 
+    }
+
+    public int GetMaxScore()
+    {
+        int maxScore = (GetGoods() + GetPerfects() + GetMisses()) * 200;
+        return maxScore; 
+    }
+
+    public int CalculateReputation()
+    {
+        float temp = (float)GetScore() / (float)GetMaxScore() * 100;
+        int repGain = Mathf.RoundToInt(temp);
+        if (Player.instance == null)
+        {
+            return repGain;
+        }
+        else
+        Player.instance.AddReputation(repGain);
+        return repGain;
     }
 }

@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI missText;
     public TextMeshProUGUI goodsText;
     public TextMeshProUGUI perfectsText;
+    public TextMeshProUGUI repText; 
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
 
@@ -47,6 +48,7 @@ public class GameUI : MonoBehaviour
             goodsText.text = "Good x " + GameController.gameInstance.GetGoods();
             perfectsText.text = "Perfects x " + GameController.gameInstance.GetPerfects();
             missText.text = "Miss x " + GameController.gameInstance.GetMisses();
+            repText.text = "Reputation Gained: + " + GameController.gameInstance.CalculateReputation();
             if (Input.GetKeyDown(KeyCode.R))
             {
                 GameController.gameInstance.RestartGame();

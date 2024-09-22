@@ -34,6 +34,8 @@ class ScriptUsageTimeline : MonoBehaviour
     public static int lastBar = 0;
     public static string lastMarkerString = null;
 
+    private float musicVolume;
+
     private void Awake()
     {
         instance = this; 
@@ -41,10 +43,11 @@ class ScriptUsageTimeline : MonoBehaviour
 
     void Start()
     {
-        
+        if (Player.instance == null)
+            musicVolume = 0.1f;
+        else
+            musicVolume = Player.instance.GetBGMVolume();
        
-       
-        
     }
 
     public void StartGame()
@@ -64,7 +67,7 @@ class ScriptUsageTimeline : MonoBehaviour
 
         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
         musicInstance.start();
-        musicInstance.setVolume(0.1f);
+        musicInstance.setVolume(musicVolume);
 
         eventEmitter.Play();
         eventEmitter.EventInstance.setVolume(0f);
@@ -120,6 +123,8 @@ class ScriptUsageTimeline : MonoBehaviour
     {
         musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         musicInstance.release();
+        eventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        eventEmitter.EventInstance.release(); 
     }
 
     void OnGUI()

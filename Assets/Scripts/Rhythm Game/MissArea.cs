@@ -9,6 +9,5 @@ public class MissArea : MonoBehaviour
         collision.gameObject.SetActive(false);
         Destroy(collision.gameObject);
         GameController.gameInstance.AddMiss();
-        Debug.Log("Missed!"); 
     }
 }

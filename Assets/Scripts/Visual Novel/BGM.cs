@@ -9,6 +9,15 @@ public class BGM : MonoBehaviour
     void Start()
     {
         eventEmitter.Play();
-        eventEmitter.EventInstance.setVolume(0.1f);
+        if (Player.instance == null)
+            eventEmitter.EventInstance.setVolume(0.1f);
+        else
+            eventEmitter.EventInstance.setVolume(Player.instance.GetBGMVolume());
+    }
+
+    private void OnDestroy()
+    {
+        eventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        eventEmitter.EventInstance.release();
     }
 }

@@ -55,9 +55,9 @@ public class NoteSpawner : MonoBehaviour
             else
             {
                 int min = 1;
-                int max = 4;
+                int max = 5;
                 int spawner = Random.Range(min , max);
-
+                
                 switch(spawner)
                 {
                     case 1:
@@ -213,7 +213,7 @@ public class NoteSpawner : MonoBehaviour
         if (spawnNote == true)
         {
             int min = 1;
-            int max = 4;
+            int max = 5;
             int spawner = Random.Range(min, max);
 
             switch (spawner)
