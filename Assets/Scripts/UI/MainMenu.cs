@@ -106,6 +106,13 @@ public class MainMenu : MonoBehaviour
 
     private void OnDestroy()
     {
-        
+        eventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        eventEmitter.EventInstance.release();
+
+        eventEmitterBGM.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        eventEmitterBGM.EventInstance.release();
+
+        eventEmitterButton.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        eventEmitterButton.EventInstance.release();
     }
 }

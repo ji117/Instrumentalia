@@ -475,9 +475,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1135266731}
+    - target: {fileID: 3612254692739701482, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Chapter_1_Post_Gig
+      objectReference: {fileID: 0}
     - target: {fileID: 8388712920645357177, guid: 2a7794d5e38a04f4ea86fadf7bb73129, type: 3}
       propertyPath: m_Name
       value: Level Complete Screen
@@ -654,7 +662,11 @@ PrefabInstance:
       objectReference: {fileID: 1313791005}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: sceneToLoad
-      value: 2
+      value: Chapter_1_Post_Gig
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
+      propertyPath: currentScene
+      value: Rhythm_game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

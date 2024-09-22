@@ -518,11 +518,11 @@ PrefabInstance:
       objectReference: {fileID: 1059407561}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: sceneToLoad
-      value: 0
+      value: Title_screen
       objectReference: {fileID: 0}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: currentScene
-      value: 2
+      value: Chapter_1_Post_Gig
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

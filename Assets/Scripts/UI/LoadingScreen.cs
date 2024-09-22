@@ -10,14 +10,14 @@ public class LoadingScreen : MonoBehaviour
 {
     public GameObject game;
     public GameObject loadingScreen;
-    public int sceneToLoad;
-    public int currentScene;
+    public string sceneToLoad;
+    public string currentScene;
     public TextMeshProUGUI loadingText;
     public string[] hints;
     public StudioEventEmitter bgmEmitter;
     
 
-    public void StartLoading(int scene)
+    public void StartLoading(string scene)
     {
         game.SetActive(false);
         loadingScreen.SetActive(true);
@@ -37,7 +37,7 @@ public class LoadingScreen : MonoBehaviour
         StartCoroutine(LoadLevel(scene));
     }
 
-    IEnumerator LoadLevel(int scene)
+    IEnumerator LoadLevel(string scene)
     {
         if (game.CompareTag("Game"))
         {

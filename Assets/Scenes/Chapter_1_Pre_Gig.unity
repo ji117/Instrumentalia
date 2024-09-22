@@ -397,11 +397,11 @@ PrefabInstance:
       objectReference: {fileID: 134279742}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: sceneToLoad
-      value: 0
+      value: Rhythm_game
       objectReference: {fileID: 0}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: currentScene
-      value: 1
+      value: Chapter_1_Pre_Gig
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
