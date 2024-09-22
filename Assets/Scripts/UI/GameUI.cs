@@ -25,7 +25,7 @@ public class GameUI : MonoBehaviour
     
     void Update()
     {
-        scoreText.text = "Score: " + GameController.gameInstance.GetScore();
+        scoreText.text = "" + GameController.gameInstance.GetScore();
 
         if (GameController.gameInstance.IsSongStarted())
         {
