@@ -44,7 +44,7 @@ public class GameUI : MonoBehaviour
         if (GameController.gameInstance.IsSongFinished() && endGameTimer < 0f)
         {
             levelCompleteScreen.SetActive(true);
-            levelCompleteScoreText.text = "Score: " + GameController.gameInstance.GetScore();
+            levelCompleteScoreText.text = GameController.gameInstance.GetScore().ToString();
             goodsText.text = "Good x " + GameController.gameInstance.GetGoods();
             perfectsText.text = "Perfects x " + GameController.gameInstance.GetPerfects();
             missText.text = "Miss x " + GameController.gameInstance.GetMisses();
