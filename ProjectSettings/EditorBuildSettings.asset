@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter_1_Post_Gig.unity
     guid: 6e796afa769d8634ba5a1d5f3f1ef4a5
+  - enabled: 1
+    path: Assets/Scenes/Apartment.unity
+    guid: 3c4c701e2158bb44bbf9ea85fde66b7a
   m_configObjects: {}

@@ -212,6 +212,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &134279743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2026374468025861773, guid: 21c98d7925946534783534f766f62221, type: 3}
+  m_PrefabInstance: {fileID: 134279739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &916960275 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
@@ -596,6 +607,10 @@ PrefabInstance:
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 916960275}
+    - target: {fileID: 3971110982417559362, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
+      propertyPath: buttonEventEmitter
+      value: 
+      objectReference: {fileID: 134279743}
     - target: {fileID: 3971110982417559362, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
       propertyPath: speechEventEmitter
       value: 

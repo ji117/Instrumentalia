@@ -251,6 +251,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 40c777f1cb036bd4888c864ac651ce32, type: 2}
     - target: {fileID: 3971110982417559362, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
+      propertyPath: buttonEventEmitter
+      value: 
+      objectReference: {fileID: 1059407564}
+    - target: {fileID: 3971110982417559362, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
       propertyPath: speechEventEmitter
       value: 
       objectReference: {fileID: 1059407562}
@@ -518,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 1059407561}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: sceneToLoad
-      value: Title_screen
+      value: Apartment
       objectReference: {fileID: 0}
     - target: {fileID: 5285759895300220799, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: currentScene
@@ -690,6 +694,17 @@ MonoBehaviour:
 --- !u!114 &1059407563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5891595567144586987, guid: 21c98d7925946534783534f766f62221, type: 3}
+  m_PrefabInstance: {fileID: 1059407560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1059407564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2026374468025861773, guid: 21c98d7925946534783534f766f62221, type: 3}
   m_PrefabInstance: {fileID: 1059407560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

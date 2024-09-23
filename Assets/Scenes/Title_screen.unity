@@ -301,6 +301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3190f49a526482242822d4331329f2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lyra: 0
+  vex: 0
+  melodi: 0
+  sion: 0
+  echo: 0
   reputation: 0
   bgmVolume: 0.1
   sfxVolume: 0.1
@@ -790,14 +795,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472865955}
-  - component: {fileID: 472865956}
   m_Layer: 0
   m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &472865955
 Transform:
   m_ObjectHideFlags: 0
@@ -817,27 +821,6 @@ Transform:
   - {fileID: 774183843}
   m_Father: {fileID: 729205672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &472865956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472865954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fce5ce81efdb9de44905af9b209ba162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleScreen: {fileID: 0}
-  mainMenu: {fileID: 0}
-  settingsMenu: {fileID: 0}
-  sfxSlider: {fileID: 0}
-  bgmSlider: {fileID: 0}
-  eventEmitter: {fileID: 0}
-  eventEmitterButton: {fileID: 0}
-  eventEmitterBGM: {fileID: 0}
-  press: {fileID: 1708002967}
 --- !u!1 &498766109
 GameObject:
   m_ObjectHideFlags: 0

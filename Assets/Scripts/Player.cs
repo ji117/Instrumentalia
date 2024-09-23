@@ -6,8 +6,15 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
-    private int trustOfMember1;
-    private int trustOfMember2;
+    private int trustOfMember1 = 50;
+    private int trustOfMember2 = 50;
+
+    public bool lyra;
+    public bool vex;
+    public bool melodi;
+    public bool sion;
+    public bool echo;
+
     [SerializeField] private int reputation;
 
     [SerializeField] private float bgmVolume = 0.1f;
