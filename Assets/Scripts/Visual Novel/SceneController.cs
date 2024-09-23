@@ -9,8 +9,13 @@ public class SceneController : MonoBehaviour
     public ChapterScene currentScene;
     public TextBoxController textbox;
     public LoadingScreen loadingScreen;
+    public GameObject vn;
+    public GameObject apartmentScene;
+
+    public bool isApartment;
 
     private bool isChoice = false;
+    
     
 
     void Start()
@@ -56,7 +61,13 @@ public class SceneController : MonoBehaviour
                 {
                     if (currentScene.nextScene == null)
                     {
-                        loadingScreen.StartLoading(loadingScreen.sceneToLoad);
+                        if (isApartment)
+                        {
+                            vn.SetActive(false);
+                            apartmentScene.SetActive(true);
+                        }
+                        else
+                            loadingScreen.StartLoading(loadingScreen.sceneToLoad);
                     }
                     else
                     currentScene = currentScene.nextScene;

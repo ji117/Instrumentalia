@@ -16,9 +16,10 @@ public class TextBoxController : MonoBehaviour
     public GameObject decisionButton2;
     public StudioEventEmitter typingEventEmitter;
     public StudioEventEmitter speechEventEmitter;
-    public float volume;
-    
+    public StudioEventEmitter buttonEventEmitter;
 
+
+    private float volume;
     private int sentenceIndex = -1;
     private int choiceNumber = 0;
     private float originalDialogueSpeed = 0.02f;
@@ -72,6 +73,8 @@ public class TextBoxController : MonoBehaviour
         if (IsDecisionButton1Pressed())
         {
             PlayChoiceSentence(0);
+            buttonEventEmitter.Play();
+            buttonEventEmitter.EventInstance.setVolume(volume);
             decision1 = false;
             choiceMade = true;
             return choiceMade;
@@ -80,6 +83,8 @@ public class TextBoxController : MonoBehaviour
         if (IsDecisionButton2Pressed())
         {
             PlayChoiceSentence(1);
+            buttonEventEmitter.Play();
+            buttonEventEmitter.EventInstance.setVolume(volume);
             decision2 = false;
             choiceMade = true;
             return choiceMade;
@@ -186,6 +191,7 @@ public class TextBoxController : MonoBehaviour
         typingEventEmitter.EventInstance.release();
         speechEventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         speechEventEmitter.EventInstance.release();
-
+        buttonEventEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        buttonEventEmitter.EventInstance.release(); 
     }
 }
