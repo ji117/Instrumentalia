@@ -13,9 +13,11 @@ public class GameController : MonoBehaviour
     bool songFinished = false;
     bool songStarted = false;
     bool gameOver = false;
+    [SerializeField] bool gamePaused;
     void Awake()
     {
         gameInstance = this;
+        gamePaused = false;
     }
 
 
@@ -41,6 +43,15 @@ public class GameController : MonoBehaviour
         {
             songFinished = true; 
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gamePaused)
+                gamePaused = false;
+            else
+                gamePaused = true;
+        }
+
     }
 
     public void AddScore(int scoreToAdd)
@@ -106,6 +117,11 @@ public class GameController : MonoBehaviour
     public bool IsSongStarted()
     {
         return songStarted; 
+    }
+
+    public bool IsGamePaused()
+    {
+        return gamePaused;
     }
 
     public void RestartGame()

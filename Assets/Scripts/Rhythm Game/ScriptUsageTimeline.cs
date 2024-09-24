@@ -114,6 +114,14 @@ class ScriptUsageTimeline : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (GameController.gameInstance.IsGamePaused())
+            musicInstance.setPaused(true);
+        else
+            musicInstance.setPaused(false);
+    }
+
     public FMOD.Studio.EventInstance GetMusicInstance()
     {
         return musicInstance; 

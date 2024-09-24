@@ -14,6 +14,7 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI repText; 
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
+    public GameObject pauseScreen; 
 
     private float endGameTimer = 10.0f; 
 
@@ -58,9 +59,14 @@ public class GameUI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameController.gameInstance.IsSongFinished())
+        if (GameController.gameInstance.IsSongFinished() && !GameController.gameInstance.IsGamePaused())
         {
             endGameTimer =  endGameTimer - 0.1f;
         }
+
+        if (GameController.gameInstance.IsGamePaused())
+            pauseScreen.SetActive(true);
+        else
+            pauseScreen.SetActive(false);
     }
 }

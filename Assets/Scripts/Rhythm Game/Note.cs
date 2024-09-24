@@ -20,6 +20,14 @@ public class Note : MonoBehaviour
    
     void Update()
     {
-        
+       
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameController.gameInstance.IsGamePaused())
+            rb.velocity = new Vector2(0, 0);
+        else
+            rb.velocity = new Vector2(0, -speed);
     }
 }
