@@ -18,7 +18,7 @@ public class TextBoxController : MonoBehaviour
     public StudioEventEmitter speechEventEmitter;
     public StudioEventEmitter buttonEventEmitter;
 
-
+    private string playerName; 
     private float volume;
     private int sentenceIndex = -1;
     private int choiceNumber = 0;
@@ -36,13 +36,18 @@ public class TextBoxController : MonoBehaviour
 
     private void Start()
     {
-        PlayNextSentence();
-
         if (Player.instance == null)
+        {
+            playerName = "Test";
             volume = 0.1f;
+        }
         else
+        {
+            playerName = Player.instance.GetName();
             volume = Player.instance.GetSFXVolume();
+        }
 
+        PlayNextSentence();
     }
     public void PlayScene(ChapterScene scene)
     {
@@ -51,7 +56,9 @@ public class TextBoxController : MonoBehaviour
     }
     public void PlayNextSentence()
     {
-        StartCoroutine(TypeDialogue(currentScene.sentences[++sentenceIndex].text));
+        string dialogueLine;
+        dialogueLine = currentScene.sentences[++sentenceIndex].text.Replace(">PLAYER NAME<", playerName);
+        StartCoroutine(TypeDialogue(dialogueLine));
         speakerName.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         speakerPotrait.sprite = currentScene.sentences[sentenceIndex].speaker.speakerPotrait;
         speechEventEmitter.Play();
@@ -60,7 +67,9 @@ public class TextBoxController : MonoBehaviour
 
     public void PlayChoiceSentence(int playerChoice)
     {
-        StartCoroutine(TypeDialogue(currentScene.choices[choiceNumber].choiceSentences[playerChoice].text));
+        string dialogueLine;
+        dialogueLine = currentScene.choices[choiceNumber].choiceSentences[playerChoice].text.Replace(">PLAYER NAME<", playerName);
+        StartCoroutine(TypeDialogue(dialogueLine));
         speakerName.text = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerName;
         speakerPotrait.sprite = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerPotrait;
         speechEventEmitter.Play();

@@ -1524,6 +1524,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 22f6c9a4fee72df4db339806468eeaab, type: 2}
     - target: {fileID: 3971110982417559362, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
+      propertyPath: buttonEventEmitter
+      value: 
+      objectReference: {fileID: 699414012}
+    - target: {fileID: 3971110982417559362, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
       propertyPath: speechEventEmitter
       value: 
       objectReference: {fileID: 699414010}

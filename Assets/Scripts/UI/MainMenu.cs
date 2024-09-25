@@ -4,12 +4,15 @@ using UnityEngine;
 using FMODUnity;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject titleScreen;
     public GameObject mainMenu;
     public GameObject settingsMenu;
+    public GameObject enterPlayerName;
+    public TMP_InputField inputField;
     public Slider sfxSlider;
     public Slider bgmSlider;
 
@@ -49,9 +52,6 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    
-    
-    
     public void Play()
     {
         eventEmitterButton.Play();
@@ -102,6 +102,16 @@ public class MainMenu : MonoBehaviour
         bgmVolume = bgmSlider.value;
         eventEmitterBGM.EventInstance.setVolume(bgmVolume);
         Player.instance.SetBGMVolume(bgmVolume);
+    }
+
+    public void EnterPlayerName()
+    {
+        enterPlayerName.SetActive(true); 
+    }
+
+    public void SubmitPlayerName()
+    {
+        Player.instance.SetName(inputField.text);
     }
 
     private void OnDestroy()

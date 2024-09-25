@@ -6,8 +6,9 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
+    private string playerName;
     private int trustOfMember1 = 50;
-    private int trustOfMember2 = 50;
+    private int trustOfMember2 = 50; 
 
     public bool lyra;
     public bool vex;
@@ -25,6 +26,16 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(this);
         instance = this;
         reputation = 0; 
+    }
+
+    public string GetName()
+    {
+        return playerName;
+    }
+
+    public void SetName(string name)
+    {
+        playerName = name; 
     }
 
     public float GetBGMVolume()
