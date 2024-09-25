@@ -11,7 +11,8 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI missText;
     public TextMeshProUGUI goodsText;
     public TextMeshProUGUI perfectsText;
-    public TextMeshProUGUI repText; 
+    public TextMeshProUGUI repText;
+    public TextMeshProUGUI timerText; 
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
     public GameObject pauseScreen; 
@@ -55,6 +56,15 @@ public class GameUI : MonoBehaviour
                 GameController.gameInstance.RestartGame();
             }
         }
+
+        if (GameController.gameInstance.IsUnpauseTimerStarted())
+        {
+            if (GameController.gameInstance.GetUnpauseTimer() <= 0)
+                GameController.gameInstance.UnpauseGame();
+
+            timerText.gameObject.SetActive(true);
+            timerText.text = Mathf.RoundToInt(GameController.gameInstance.GetUnpauseTimer()).ToString();
+        }
     }
 
     private void FixedUpdate()
@@ -67,6 +77,9 @@ public class GameUI : MonoBehaviour
         if (GameController.gameInstance.IsGamePaused())
             pauseScreen.SetActive(true);
         else
+        {
             pauseScreen.SetActive(false);
+            timerText.gameObject.SetActive(false);
+        }
     }
 }

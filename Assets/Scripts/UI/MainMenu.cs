@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject settingsMenu;
     public GameObject enterPlayerName;
+    public GameObject enterPlayerHand;
     public TMP_InputField inputField;
     public Slider sfxSlider;
     public Slider bgmSlider;
@@ -112,6 +113,17 @@ public class MainMenu : MonoBehaviour
     public void SubmitPlayerName()
     {
         Player.instance.SetName(inputField.text);
+        enterPlayerName.SetActive(false);
+    }
+
+    public void ShowPlayerHandWindow()
+    {
+        enterPlayerHand.SetActive(true);
+    }
+
+    public void SetPlayerHand(bool rightHanded)
+    {
+        Player.instance.SetHand(rightHanded);
     }
 
     private void OnDestroy()

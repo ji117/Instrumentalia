@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController gameInstance;
+    public NoteArea area1;
+    public NoteArea area2;
+    public NoteArea area3;
+    public NoteArea area4;
     public LoadingScreen loadingScreen;
     [SerializeField] int score = 0;
     [SerializeField] int misses = 0;
@@ -13,13 +17,36 @@ public class GameController : MonoBehaviour
     bool songFinished = false;
     bool songStarted = false;
     bool gameOver = false;
-    [SerializeField] bool gamePaused;
+    bool gamePaused;
+    bool startUnpauseTimer = false;
+    float unpauseTimer = 3.0f; 
     void Awake()
     {
         gameInstance = this;
         gamePaused = false;
     }
 
+    private void Start()
+    {
+        if (Player.instance != null)
+        {
+            if (Player.instance.IsRightHanded())
+            {
+                area1.key = KeyCode.H;
+                area2.key = KeyCode.J;
+                area3.key = KeyCode.K;
+                area4.key = KeyCode.L;
+            }
+            else
+            {
+                area1.key = KeyCode.A;
+                area2.key = KeyCode.S;
+                area3.key = KeyCode.D;
+                area4.key = KeyCode.F;
+            }
+            //todo change sprites depending on keys when added by Jas
+        }
+    }
 
     void Update()
     {
@@ -39,19 +66,25 @@ public class GameController : MonoBehaviour
            
         //}
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I)) //debug only
         {
             songFinished = true; 
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space)) //might change this to only be space
         {
             if (gamePaused)
-                gamePaused = false;
+                startUnpauseTimer = true;
             else
                 gamePaused = true;
         }
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (startUnpauseTimer)
+            unpauseTimer = unpauseTimer - Time.fixedDeltaTime;
     }
 
     public void AddScore(int scoreToAdd)
@@ -124,6 +157,11 @@ public class GameController : MonoBehaviour
         return gamePaused;
     }
 
+    public bool IsUnpauseTimerStarted()
+    {
+        return startUnpauseTimer; 
+    }
+
     public void RestartGame()
     {
         loadingScreen.StartLoading(loadingScreen.currentScene); 
@@ -146,5 +184,17 @@ public class GameController : MonoBehaviour
         else
         Player.instance.AddReputation(repGain);
         return repGain;
+    }
+
+    public void UnpauseGame()
+    {
+        startUnpauseTimer = false;
+        gamePaused = false;
+        unpauseTimer = 3.0f; 
+    }
+
+    public float GetUnpauseTimer()
+    {
+        return unpauseTimer; 
     }
 }
