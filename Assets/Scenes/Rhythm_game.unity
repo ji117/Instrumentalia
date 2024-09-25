@@ -227,6 +227,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2457557804377758423, guid: f7ae1f2a55225ab4ea8deae537e26cbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5985081824654564180, guid: f7ae1f2a55225ab4ea8deae537e26cbd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -281,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8690834558756097685, guid: f7ae1f2a55225ab4ea8deae537e26cbd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -577,6 +581,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3317355563590103855, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3461123452096374161, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -673,6 +681,10 @@ PrefabInstance:
       propertyPath: currentScene
       value: Rhythm_game
       objectReference: {fileID: 0}
+    - target: {fileID: 7825647087711697666, guid: a3b0d054190884a4aa5d9349e71c3563, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 52a1b287f0705784396b5865472e0e21, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
