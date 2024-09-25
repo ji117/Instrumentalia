@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
 
     private string playerName;
     private int trustOfMember1 = 50;
-    private int trustOfMember2 = 50; 
+    private int trustOfMember2 = 50;
+    private bool rightHanded;
 
     public bool lyra;
     public bool vex;
@@ -66,5 +67,15 @@ public class Player : MonoBehaviour
     public void AddReputation(int repToAdd)
     {
         reputation = reputation + repToAdd;
+    }
+
+    public bool IsRightHanded()
+    {
+        return rightHanded; 
+    }
+
+    public void SetHand(bool isRightHanded)
+    {
+        rightHanded = isRightHanded; 
     }
 }
