@@ -47,10 +47,10 @@ public class GameUI : MonoBehaviour
         {
             levelCompleteScreen.SetActive(true);
             levelCompleteScoreText.text = GameController.gameInstance.GetScore().ToString();
-            goodsText.text = "Good x " + GameController.gameInstance.GetGoods();
-            perfectsText.text = "Perfects x " + GameController.gameInstance.GetPerfects();
-            missText.text = "Miss x " + GameController.gameInstance.GetMisses();
-            repText.text = "Reputation Gained: + " + GameController.gameInstance.CalculateReputation();
+            goodsText.text = "x " + GameController.gameInstance.GetGoods();
+            perfectsText.text = "x " + GameController.gameInstance.GetPerfects();
+            missText.text = "x " + GameController.gameInstance.GetMisses();
+            repText.text = "+ " + GameController.gameInstance.CalculateReputation();
             if (Input.GetKeyDown(KeyCode.R))
             {
                 GameController.gameInstance.RestartGame();
