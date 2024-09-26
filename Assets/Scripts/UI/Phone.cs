@@ -45,7 +45,7 @@ public class Phone : MonoBehaviour
 
     private void Update()
     {
-        if (messages.activeSelf)
+        if (messages.activeSelf && !typingImage.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
