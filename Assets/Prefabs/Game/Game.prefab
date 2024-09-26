@@ -254,6 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4c7a327d14e5e48ac2258693095395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  area1: {fileID: 0}
+  area2: {fileID: 0}
+  area3: {fileID: 0}
+  area4: {fileID: 0}
   loadingScreen: {fileID: 0}
   score: 0
   misses: 0
