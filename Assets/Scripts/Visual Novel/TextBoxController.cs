@@ -18,7 +18,8 @@ public class TextBoxController : MonoBehaviour
     public StudioEventEmitter speechEventEmitter;
     public StudioEventEmitter buttonEventEmitter;
 
-    private string playerName; 
+    private string playerName;
+    private string currentDialogueLine; 
     private float volume;
     private int sentenceIndex = -1;
     private int choiceNumber = 0;
@@ -56,9 +57,8 @@ public class TextBoxController : MonoBehaviour
     }
     public void PlayNextSentence()
     {
-        string dialogueLine;
-        dialogueLine = currentScene.sentences[++sentenceIndex].text.Replace(">PLAYER NAME<", playerName);
-        StartCoroutine(TypeDialogue(dialogueLine));
+        currentDialogueLine = currentScene.sentences[++sentenceIndex].text.Replace(">PLAYER NAME<", playerName);
+        StartCoroutine(TypeDialogue(currentDialogueLine));
         speakerName.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         speakerPotrait.sprite = currentScene.sentences[sentenceIndex].speaker.speakerPotrait;
         speechEventEmitter.Play();
@@ -67,9 +67,8 @@ public class TextBoxController : MonoBehaviour
 
     public void PlayChoiceSentence(int playerChoice)
     {
-        string dialogueLine;
-        dialogueLine = currentScene.choices[choiceNumber].choiceSentences[playerChoice].text.Replace(">PLAYER NAME<", playerName);
-        StartCoroutine(TypeDialogue(dialogueLine));
+        currentDialogueLine = currentScene.choices[choiceNumber].choiceSentences[playerChoice].text.Replace(">PLAYER NAME<", playerName);
+        StartCoroutine(TypeDialogue(currentDialogueLine));
         speakerName.text = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerName;
         speakerPotrait.sprite = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerPotrait;
         speechEventEmitter.Play();
@@ -101,6 +100,11 @@ public class TextBoxController : MonoBehaviour
         return choiceMade;
     }
 
+    public string GetCurrentDialogueLine()
+    {
+        return currentDialogueLine; 
+    }
+
     public void ChoiceMade()
     {
         choiceMade = false; 
@@ -129,6 +133,11 @@ public class TextBoxController : MonoBehaviour
     public bool IsCompleted()
     {
         return state == State.COMPLETED;
+    }
+
+    public void SetComplete()
+    {
+        state = State.COMPLETED; 
     }
 
     public bool IsLastSentence()
@@ -193,6 +202,7 @@ public class TextBoxController : MonoBehaviour
         }
         typingEventEmitter.Stop();
     }
+
 
     private void OnDestroy()
     {

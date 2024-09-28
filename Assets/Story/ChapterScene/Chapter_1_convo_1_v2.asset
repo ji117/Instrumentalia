@@ -36,14 +36,14 @@ MonoBehaviour:
       acoustic guitar. Huh? "
     speaker: {fileID: 11400000, guid: 2cb855c285abcdf4aa22f756bde9baf1, type: 2}
   - text: "Hey >PLAYER NAME< Zack told me about the bass guitar. Don\u2019t worry,
-      down here, there\u2019s always someone that knows someone that can tune things
-      up here. I\u2019ve had to get my keyboard and saxophone seen to at least once
-      each\u2026 I\u2019m Echo. Nice to meet you at last."
+      down here there\u2019s always someone who knows someone that can tune things
+      up. I\u2019ve had to get my keyboard and saxophone seen to at least once each\u2026
+      I\u2019m Echo. Nice to meet you at last."
     speaker: {fileID: 11400000, guid: e44c65ebe51753c4faad93f1646a90b8, type: 2}
   - text: "And I\u2019m the black sheep on piano and cello, Melodi, if you wanna
-      know. Know they\u2019re not as hip but I like \u2018em. "
+      know. Now they\u2019re not as hip but I like \u2018em. "
     speaker: {fileID: 11400000, guid: 0a8b447c759f5a34eb063489c9cbe4ad, type: 2}
-  - text: "That\u2019s two more than some of us can play Melodi. Zack and I don\u2019t
+  - text: "That\u2019s two more than some of us can play, Melodi. Zack and I don\u2019t
       play anything at all. It\u2019s a wonder why we share tables with you guys
       sometimes."
     speaker: {fileID: 11400000, guid: a40a7f73bf17f0848ab9a4a5342f50fd, type: 2}
@@ -58,11 +58,11 @@ MonoBehaviour:
       and provide my entertainment. Tell you what, though I wouldn\u2019t recommend
       them as a pair of cheerleader pom poms!"
     speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
-  - text: "Yeah, funny that! You still haven\u2019t paid me to get those jeans washed
-      you ruined. They absolutely stunk."
+  - text: Yeah, funny that! You still haven't paid for those jeans you ruined to
+      be washed. They absolutely stunk.
     speaker: {fileID: 11400000, guid: 2cb855c285abcdf4aa22f756bde9baf1, type: 2}
   - text: "Oh my God! It was an accident, get over it\u2026 Anyway\u2026 Speaking
-      of entertainment\u2026 >PLAYER NAME< Off you go\u2026 You\u2019re next on stage,
+      of entertainment\u2026 >PLAYER NAME< off you go\u2026 You\u2019re next on stage,
       you\u2019re welcome! "
     speaker: {fileID: 11400000, guid: f8fb9be6845f494438429c36109e0417, type: 2}
   - text: I know how you feel >PLAYER NAME< They got me the same way when they marched
@@ -78,13 +78,13 @@ MonoBehaviour:
   - choiceSentences:
     - text: "Doesn\u2019t matter >PLAYER NAME< you can put a twist on any song nowadays.
         You can turn something rock into tropical, something classic into dubstep,
-        acoustic into club. Anything goes. I\u2019m Sion by the way. My sets, I usually
-        perform something with drums or trumpet."
+        acoustic into club. Anything goes. I\u2019m Sion by the way. In my sets,
+        I usually perform something with drums or trumpet."
       speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
     - text: "Doesn\u2019t matter >PLAYER NAME< you can put a twist on any song nowadays.
         You can turn something rock into tropical, something classic into dubstep,
-        acoustic into club. Anything goes. I\u2019m Sion by the way. My sets, I usually
-        perform something with drums or trumpet."
+        acoustic into club. Anything goes. I\u2019m Sion by the way. In my sets,
+        I usually perform something with drums or trumpet."
       speaker: {fileID: 11400000, guid: 9d2a706685c89f841b535b15ee17854c, type: 2}
     response1: "Depends\u2026 What are you in the mood for?"
     response2: "I just got here\u2026 I have no idea what the \u2018vibe\u2019 is

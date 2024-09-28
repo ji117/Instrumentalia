@@ -25,7 +25,7 @@ public class Note : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameController.gameInstance.IsGamePaused())
+        if (GameController.gameInstance.IsGamePaused() || GameController.gameInstance.IsGameOver())
             rb.velocity = new Vector2(0, 0);
         else
             rb.velocity = new Vector2(0, -speed);

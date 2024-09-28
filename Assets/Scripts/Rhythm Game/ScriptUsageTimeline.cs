@@ -120,6 +120,9 @@ class ScriptUsageTimeline : MonoBehaviour
             musicInstance.setPaused(true);
         else
             musicInstance.setPaused(false);
+
+        if (GameController.gameInstance.IsGameOver())
+            musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public FMOD.Studio.EventInstance GetMusicInstance()
@@ -135,13 +138,13 @@ class ScriptUsageTimeline : MonoBehaviour
         eventEmitter.EventInstance.release(); 
     }
 
-    void OnGUI()
-    {
-        if (GameController.gameInstance.IsSongStarted())
-        {
-            GUILayout.Box(String.Format("Current Bar = {0}, Current Beat = {1}, Last Marker = {2}", timelineInfo.currentMusicBar, timelineInfo.currentMusicBeat, (string)timelineInfo.lastMarker));
-        }
-    }
+    //void OnGUI()
+    //{
+    //    if (GameController.gameInstance.IsSongStarted())
+    //    {
+    //        GUILayout.Box(String.Format("Current Bar = {0}, Current Beat = {1}, Last Marker = {2}", timelineInfo.currentMusicBar, timelineInfo.currentMusicBeat, (string)timelineInfo.lastMarker));
+    //    }
+    //}
 
     [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
     static FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)

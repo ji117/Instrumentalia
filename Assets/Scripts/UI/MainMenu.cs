@@ -39,6 +39,12 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
+        if (!eventEmitterBGM.IsPlaying())
+        {
+            eventEmitterBGM.Play();
+            eventEmitterBGM.EventInstance.setVolume(bgmVolume);
+        }
+
         if (Input.anyKeyDown && titleScreen.activeSelf)
         {
             titleScreen.SetActive(false);
