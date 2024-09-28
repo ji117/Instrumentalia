@@ -18,12 +18,12 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
   choices:
   - choiceSentences:
-    - text: "My guys on stage have your back. Start with >SONG TITLE< and you\u2019ll
+    - text: "My guys on stage have your back. Start with Shinjuku Drift and you\u2019ll
         have this crowd in the palm of your hand. All you\u2019ve got to do is hit
         the right keys in time to match the tempo. It\u2019ll come to you. It always
         does. Shall we? "
       speaker: {fileID: 11400000, guid: a5d31a48f8f133841a4f539bf0ff715c, type: 2}
-    - text: "My guys on stage have your back. Start with >SONG TITLE< and you\u2019ll
+    - text: "My guys on stage have your back. Start with Shinjuku Drift and you\u2019ll
         have this crowd in the palm of your hand. All you\u2019ve got to do is hit
         the right keys in time to match the tempo. It\u2019ll come to you. It always
         does. Shall we? "

@@ -40,7 +40,11 @@ public class SceneController : MonoBehaviour
         {
             if (textbox.IsCompleted() == false)
             {
-                textbox.SetDialogueSpeed(0.0f);
+                textbox.StopAllCoroutines();
+                textbox.dialogue.text = textbox.GetCurrentDialogueLine();
+                textbox.SetComplete();
+                textbox.typingEventEmitter.Stop();
+                return;
             }
             if (textbox.IsCompleted())
             {

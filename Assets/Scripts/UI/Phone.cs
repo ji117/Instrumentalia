@@ -10,6 +10,7 @@ public class Phone : MonoBehaviour
     public GameObject messages;
     public GameObject acceptenceMessage;
     public GameObject confirmWindow;
+    public GameObject continueWindow; 
 
     public GameObject typingImage; // Typing image
 
@@ -18,6 +19,8 @@ public class Phone : MonoBehaviour
     public TextMeshProUGUI bandAcceptence;
 
     public StudioEventEmitter eventEmitter;
+
+    public LoadingScreen loadingScreen;
 
     private int members = 0;
     private bool isPlayerNull;
@@ -45,7 +48,7 @@ public class Phone : MonoBehaviour
 
     private void Update()
     {
-        if (messages.activeSelf && !typingImage.activeSelf)
+        if (messages.activeSelf && !typingImage.activeSelf && members != 2)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -54,9 +57,9 @@ public class Phone : MonoBehaviour
             }
         }
 
-        if (members == 2)
+        if (Input.GetKeyDown(KeyCode.Escape) && members == 2)
         {
-            // Go to chapter 2 
+            continueWindow.SetActive(true); 
         }
     }
 

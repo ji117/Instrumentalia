@@ -257,7 +257,7 @@ MonoBehaviour:
   loadingText: {fileID: 8277962602376264847}
   hints:
   - Do well on the rhythm game to earn more reputation!
-  - The choices you make affects the bands reputation and trust between band members
+  - The choices you make affect your reputation and trust between band members
   bgmEmitter: {fileID: 0}
 --- !u!1 &3317355563590103855
 GameObject:

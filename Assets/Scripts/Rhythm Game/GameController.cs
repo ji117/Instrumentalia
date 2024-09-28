@@ -9,6 +9,14 @@ public class GameController : MonoBehaviour
     public NoteArea area2;
     public NoteArea area3;
     public NoteArea area4;
+    public Sprite A;
+    public Sprite S;
+    public Sprite D;
+    public Sprite F;
+    public Sprite H;
+    public Sprite J;
+    public Sprite K;
+    public Sprite L;
     public LoadingScreen loadingScreen;
     [SerializeField] int score = 0;
     [SerializeField] int misses = 0;
@@ -33,16 +41,24 @@ public class GameController : MonoBehaviour
             if (Player.instance.IsRightHanded())
             {
                 area1.key = KeyCode.H;
+                area1.GetComponent<SpriteRenderer>().sprite = H;
                 area2.key = KeyCode.J;
+                area2.GetComponent<SpriteRenderer>().sprite = J;
                 area3.key = KeyCode.K;
+                area3.GetComponent<SpriteRenderer>().sprite = K;
                 area4.key = KeyCode.L;
+                area4.GetComponent<SpriteRenderer>().sprite = L;
             }
             else
             {
                 area1.key = KeyCode.A;
+                area1.GetComponent<SpriteRenderer>().sprite = A;
                 area2.key = KeyCode.S;
+                area2.GetComponent<SpriteRenderer>().sprite = S;
                 area3.key = KeyCode.D;
+                area3.GetComponent<SpriteRenderer>().sprite = D;
                 area4.key = KeyCode.F;
+                area4.GetComponent<SpriteRenderer>().sprite = F;
             }
             //todo change sprites depending on keys when added by Jas
         }
