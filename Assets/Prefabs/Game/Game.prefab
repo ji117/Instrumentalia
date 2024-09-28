@@ -259,6 +259,14 @@ MonoBehaviour:
   area2: {fileID: 0}
   area3: {fileID: 0}
   area4: {fileID: 0}
+  A: {fileID: 0}
+  S: {fileID: 0}
+  D: {fileID: 0}
+  F: {fileID: 0}
+  H: {fileID: 0}
+  J: {fileID: 0}
+  K: {fileID: 0}
+  L: {fileID: 0}
   loadingScreen: {fileID: 0}
   score: 0
   misses: 0
@@ -1022,7 +1030,7 @@ PrefabInstance:
     - target: {fileID: 5673583590261218898, guid: 3893101b9cce0874c8c8bb440914ac07, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ab900888522815d49b897b0692fae228, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e622f5246894c54485b6f30dd602bbc, type: 3}
     - target: {fileID: 5673583590261218898, guid: 3893101b9cce0874c8c8bb440914ac07, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1538,7 +1546,7 @@ PrefabInstance:
     - target: {fileID: 5673583590261218898, guid: 3893101b9cce0874c8c8bb440914ac07, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 267ec9d8088a89c4199f5929e9d8417c, type: 3}
+      objectReference: {fileID: 21300000, guid: 5f8f10f791014bd4bbe3a7f5bf19d200, type: 3}
     - target: {fileID: 5673583590261218898, guid: 3893101b9cce0874c8c8bb440914ac07, type: 3}
       propertyPath: m_Color.b
       value: 1
