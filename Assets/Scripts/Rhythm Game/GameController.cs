@@ -60,7 +60,6 @@ public class GameController : MonoBehaviour
                 area4.key = KeyCode.F;
                 area4.GetComponent<SpriteRenderer>().sprite = F;
             }
-            //todo change sprites depending on keys when added by Jas
         }
     }
 
