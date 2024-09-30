@@ -258,6 +258,26 @@ MonoBehaviour:
   hints:
   - Do well on the rhythm game to earn more reputation!
   - The choices you make affect your reputation and trust between band members
+  - Drums date back to 6000 B.C., evolving from ancient communication tools to modern
+    musical staples.
+  - Trumpets have roots in ancient Egypt and transformed from a military signal to
+    a key player in jazz and classical music.
+  - ' Steel drums originated from Trinidad in the 1930s, evolving from oil drums
+    into a melodic instrument central to calypso and beyond. '
+  - Violins began in the 16th century, in Italy celebrated for their versatile expressive
+    range across various music genres.
+  - Accordions emerged in the 19th century,  as a bellows-driven instrument known
+    for its role in folk music and diverse global genres.
+  - Acoustic Guitars are ancient string instruments, and since the 19th century has
+    become a staple across multiple music styles.
+  - Keyboards evolved from early instruments like the harpsichord. They offer a wide
+    range of sounds and instruments for any performance.
+  - Saxophones began in 1846 with Adolphe Sax. It combines brass and woodwind qualities,
+    most noted for jazz and contemporary music.
+  - Pianos appeared in the 18th century, revolutionising music and pioneering some
+    of the world's most famous historical classical compositions.
+  - Cellos date back to the 16th century, prized for their rich tones and emotional
+    depth, playing a vital role in orchestras and chamber music.
   bgmEmitter: {fileID: 0}
 --- !u!1 &3317355563590103855
 GameObject:
