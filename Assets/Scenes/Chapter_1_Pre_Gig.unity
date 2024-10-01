@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Visual Novel
       objectReference: {fileID: 0}
+    - target: {fileID: 1255024286167955194, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2512263741938454169, guid: 8ea1fc37b172b9c49ab4d7170ea88929, type: 3}
       propertyPath: loadingScreen
       value: 
