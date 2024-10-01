@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Vex
   speakerPotrait: {fileID: 21300000, guid: 27a45c233ca14d94bb47580396f561eb, type: 3}
+  speakerInstrument: {fileID: 21300000, guid: 16ce91ad90ee0034e96fd74e61bd0400, type: 3}

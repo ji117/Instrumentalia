@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Echo
   speakerPotrait: {fileID: 21300000, guid: 58ff74acffb61764ea7703a1d485a17e, type: 3}
+  speakerInstrument: {fileID: 21300000, guid: ae6287a21342f7b4d9f683447dd2e826, type: 3}

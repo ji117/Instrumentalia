@@ -8,4 +8,5 @@ public class Speaker : ScriptableObject
 {
     public string speakerName;
     public Sprite speakerPotrait;
+    public Sprite speakerInstrument; 
 }

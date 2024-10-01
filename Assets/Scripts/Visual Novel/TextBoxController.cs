@@ -10,7 +10,8 @@ public class TextBoxController : MonoBehaviour
     public TextMeshProUGUI dialogue;
     public TextMeshProUGUI speakerName;
     public Image speakerPotrait;
-    public Image background; 
+    public Image background;
+    public Image instrument; 
     public ChapterScene currentScene;
     public GameObject decisionButton1;
     public GameObject decisionButton2;
@@ -61,6 +62,15 @@ public class TextBoxController : MonoBehaviour
         StartCoroutine(TypeDialogue(currentDialogueLine));
         speakerName.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         speakerPotrait.sprite = currentScene.sentences[sentenceIndex].speaker.speakerPotrait;
+
+        if (currentScene.sentences[sentenceIndex].speaker.speakerInstrument != null)
+        {
+            instrument.gameObject.SetActive(true);
+            instrument.sprite = currentScene.sentences[sentenceIndex].speaker.speakerInstrument;
+        }
+        else
+            instrument.gameObject.SetActive(false);
+
         speechEventEmitter.Play();
         speechEventEmitter.EventInstance.setVolume(volume);
     }
@@ -71,6 +81,15 @@ public class TextBoxController : MonoBehaviour
         StartCoroutine(TypeDialogue(currentDialogueLine));
         speakerName.text = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerName;
         speakerPotrait.sprite = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerPotrait;
+
+        if (currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerInstrument != null)
+        {
+            instrument.gameObject.SetActive(true);
+            instrument.sprite = currentScene.choices[choiceNumber].choiceSentences[playerChoice].speaker.speakerInstrument;
+        }
+        else
+            instrument.gameObject.SetActive(false);
+
         speechEventEmitter.Play();
         speechEventEmitter.EventInstance.setVolume(volume);
         choiceNumber++;

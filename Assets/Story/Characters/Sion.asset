@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Sion
   speakerPotrait: {fileID: 21300000, guid: 846587af87263a349ad47125ccf5b83e, type: 3}
+  speakerInstrument: {fileID: 21300000, guid: c60db4e04db8589439cf1764289a4438, type: 3}

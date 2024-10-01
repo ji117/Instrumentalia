@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Lyra
   speakerPotrait: {fileID: 21300000, guid: 2e68a40c32779f64d94fc70ad9aa6805, type: 3}
+  speakerInstrument: {fileID: 21300000, guid: 98584bae11ef01b4ab4e4bca467eb4a4, type: 3}
