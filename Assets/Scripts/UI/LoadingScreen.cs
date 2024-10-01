@@ -15,6 +15,10 @@ public class LoadingScreen : MonoBehaviour
     public TextMeshProUGUI loadingText;
     public string[] hints;
     public StudioEventEmitter bgmEmitter;
+
+    public Image musicalNoteImage;
+    public Sprite[] musicalNoteSprites;
+    private int currentNoteIndex = 0;
     
 
     public void StartLoading(string scene)
@@ -23,7 +27,10 @@ public class LoadingScreen : MonoBehaviour
         loadingScreen.SetActive(true);
         int textToLoad = Random.Range(0, hints.Length); 
         loadingText.text = hints[textToLoad];
+        
         StartCoroutine(LoadLevel(scene));
+
+        StartCoroutine(ChangeMusicNoteSprite());
     }
 
     IEnumerator LoadLevel(string scene)
@@ -36,5 +43,15 @@ public class LoadingScreen : MonoBehaviour
         bgmEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         yield return new WaitForSeconds(3.0f);
         SceneManager.LoadSceneAsync(scene);
+    }
+
+    IEnumerator ChangeMusicNoteSprite()
+    {
+        while (currentNoteIndex < musicalNoteSprites.Length)
+        {
+            musicalNoteImage.sprite = musicalNoteSprites[currentNoteIndex];
+            currentNoteIndex++;
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }
