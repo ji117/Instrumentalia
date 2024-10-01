@@ -21,19 +21,8 @@ public class LoadingScreen : MonoBehaviour
     {
         game.SetActive(false);
         loadingScreen.SetActive(true);
-        int textToLoad = Random.Range(1, 3);
-
-        switch(textToLoad)
-        {
-            case 1:
-                loadingText.text = hints[0];
-                break;
-
-            case 2:
-                loadingText.text = hints[1];
-                break;
-        }
-
+        int textToLoad = Random.Range(0, hints.Length); 
+        loadingText.text = hints[textToLoad];
         StartCoroutine(LoadLevel(scene));
     }
 

@@ -117,11 +117,17 @@ class ScriptUsageTimeline : MonoBehaviour
     private void FixedUpdate()
     {
         if (GameController.gameInstance.IsGamePaused())
+        {
             musicInstance.setPaused(true);
+            eventEmitter.EventInstance.setPaused(true);
+        }
         else
+        {
             musicInstance.setPaused(false);
+            eventEmitter.EventInstance.setPaused(false);
+        }
 
-        if (GameController.gameInstance.IsGameOver())
+            if (GameController.gameInstance.IsGameOver())
             musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
