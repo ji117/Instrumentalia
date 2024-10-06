@@ -78,7 +78,7 @@ public class NoteSpawner : MonoBehaviour
                 }
                 
                 var obj = Instantiate(objectToSpawn, spawnerToUse.transform);
-                nextSpawn += spawnInterval /*- 1*/;
+                nextSpawn += spawnInterval;
                 obj.transform.position = spawnerToUse.transform.localPosition;
             }
         }

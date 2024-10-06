@@ -18,6 +18,9 @@ public class GameController : MonoBehaviour
     public Sprite K;
     public Sprite L;
     public LoadingScreen loadingScreen;
+    public GameObject missEffect;
+    public GameObject goodEffect;
+    public Transform effectTransform; 
     [SerializeField] int score = 0;
     [SerializeField] int misses = 0;
     [SerializeField] int goods = 0;
@@ -76,16 +79,6 @@ public class GameController : MonoBehaviour
             gameOver = true;
         }
 
-        //if (songFinished)
-        //{
-           
-        //}
-
-        if (Input.GetKeyDown(KeyCode.I)) //debug only
-        {
-            songFinished = true; 
-        }
-
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space)) //might change this to only be space
         {
             if (gamePaused)
@@ -110,11 +103,13 @@ public class GameController : MonoBehaviour
     public void AddMiss()
     {
         misses++;
+        var obj = Instantiate(missEffect);
     }
 
     public void AddGood()
     {
         goods++;
+        var obj = Instantiate(goodEffect);
     }
 
     public void AddPerfect()
