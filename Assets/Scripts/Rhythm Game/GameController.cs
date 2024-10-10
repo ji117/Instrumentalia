@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public LoadingScreen loadingScreen;
     public GameObject missEffect;
     public GameObject goodEffect;
+    public GameObject perfectEffect; 
     public Transform effectTransform; 
     [SerializeField] int score = 0;
     [SerializeField] int misses = 0;
@@ -115,6 +116,7 @@ public class GameController : MonoBehaviour
     public void AddPerfect()
     {
         perfects++;
+        var obj = Instantiate(perfectEffect);
     }
 
     public int GetScore()

@@ -3922,6 +3922,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1135266731}
     - target: {fileID: 4862711180867028336, guid: 36aab7f8536be2c46875cd49f32190f2, type: 3}
+      propertyPath: perfectEffect
+      value: 
+      objectReference: {fileID: 937758733386462801, guid: 718d78780e537aa4cb2a078f76abee14, type: 3}
+    - target: {fileID: 4862711180867028336, guid: 36aab7f8536be2c46875cd49f32190f2, type: 3}
       propertyPath: effectTransform
       value: 
       objectReference: {fileID: 1290300072}
