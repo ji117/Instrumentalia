@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject titleScreen;
     public GameObject mainMenu;
     public GameObject settingsMenu;
+    public GameObject creditsMenu; 
     public GameObject enterPlayerName;
     public GameObject enterPlayerHand;
     public TMP_InputField inputField;
@@ -87,6 +88,20 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void Credits()
+    {
+        eventEmitterButton.Play();
+        eventEmitterButton.EventInstance.setVolume(sfxVolume);
+
+        press1.SetActive(true); //shows image press1 befoer menu disappears
+        press.SetActive(false);
+        press2.SetActive(false);
+
+        mainMenu.SetActive(false);
+        creditsMenu.SetActive(true);
+
+    }
+
     public void Quit()
     {
         press2.SetActive(true);
@@ -99,7 +114,12 @@ public class MainMenu : MonoBehaviour
     {
         eventEmitterButton.Play();
         eventEmitterButton.EventInstance.setVolume(sfxVolume);
-        settingsMenu.SetActive(false);
+
+        if (settingsMenu.activeSelf)
+            settingsMenu.SetActive(false);
+        else
+            creditsMenu.SetActive(false);
+
         mainMenu.SetActive(true);
 
         press.SetActive(false);
