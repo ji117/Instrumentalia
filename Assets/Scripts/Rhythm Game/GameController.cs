@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -22,16 +23,28 @@ public class GameController : MonoBehaviour
     public GameObject goodEffect;
     public GameObject perfectEffect; 
     public Transform effectTransform; 
+    public GameObject redScreenEffect;  //for the misses
+    public TextMeshProUGUI StreakText;
+
     [SerializeField] int score = 0;
     [SerializeField] int misses = 0;
     [SerializeField] int goods = 0;
     [SerializeField] int perfects = 0;
+    [SerializeField] int perfectStreak = 0;
+    [SerializeField] int combinedStreak = 0;
+    [SerializeField] int missStreak = 0;
     bool songFinished = false;
     bool songStarted = false;
     bool gameOver = false;
     bool gamePaused;
     bool startUnpauseTimer = false;
     float unpauseTimer = 3.0f; 
+    int consecutivePerfects = 0;
+    
+
+    
+
+
     void Awake()
     {
         gameInstance = this;
@@ -88,6 +101,15 @@ public class GameController : MonoBehaviour
                 gamePaused = true;
         }
 
+        if (combinedStreak >= 3)
+        {
+            StreakText.text = "STREAK x " + (combinedStreak);
+            StreakText.gameObject.SetActive(true);
+        }
+        else{
+            StreakText.gameObject.SetActive(false);
+        }
+
     }
 
     private void FixedUpdate()
@@ -104,19 +126,67 @@ public class GameController : MonoBehaviour
     public void AddMiss()
     {
         misses++;
+        consecutivePerfects = 0;
+        perfectStreak = 0;
+        combinedStreak = 0;
         var obj = Instantiate(missEffect);
+        if (misses >= 3)
+        {
+            redScreenEffect.SetActive(true);
+        }
+        else{
+            redScreenEffect.SetActive(false);
+        }
     }
 
     public void AddGood()
     {
         goods++;
+        missStreak = 0;
+        consecutivePerfects = 0;
+        perfectStreak = 0;
+        if (combinedStreak < 3)
+        {
+            combinedStreak++;
+        }
+        else
+        {
+            combinedStreak++;
+        }
         var obj = Instantiate(goodEffect);
+        redScreenEffect.SetActive(false);
     }
 
     public void AddPerfect()
     {
         perfects++;
+        consecutivePerfects++;
+        missStreak = 0;
+        perfectStreak++;
+        if (consecutivePerfects == 3)
+        {
+            perfectStreak++;
+        }
+                if (combinedStreak < 3)
+        {
+            combinedStreak++;
+        }
+        else
+        {
+            combinedStreak++;
+        }
         var obj = Instantiate(perfectEffect);
+        redScreenEffect.SetActive(false);
+    }
+    private void UpdateRedScreenEffects()
+    {  
+        if (misses >= 3)
+        {
+            redScreenEffect.SetActive(true);
+        }
+        else{
+            redScreenEffect.SetActive(false);
+        }
     }
 
     public int GetScore()
@@ -203,6 +273,7 @@ public class GameController : MonoBehaviour
         startUnpauseTimer = false;
         gamePaused = false;
         unpauseTimer = 3.0f; 
+        redScreenEffect.SetActive(false);
     }
 
     public float GetUnpauseTimer()
