@@ -124,6 +124,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 0}
   vn: {fileID: 0}
   apartmentScene: {fileID: 0}
+  settingsMenu: {fileID: 0}
   isApartment: 0
 --- !u!1 &1791579119534896601
 GameObject:
